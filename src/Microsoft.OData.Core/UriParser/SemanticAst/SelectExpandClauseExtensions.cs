@@ -86,7 +86,17 @@ namespace Microsoft.OData.UriParser
         /// <returns>String list generated from selected items</returns>
         internal static List<string> GetCurrentLevelSelectList(this SelectExpandClause selectExpandClause)
         {
-            return selectExpandClause.SelectedItems.Select(GetSelectString).Where(i => i != null).ToList();
+            List<string> returns = new List<string>();
+            foreach (var selectItem in selectExpandClause.SelectedItems)
+            {
+                IList<string> a = GetSelectString2(selectItem);
+                if (a != null)
+                {
+                    returns.AddRange(a);
+                }
+            }
+            return returns;
+            //return selectExpandClause.SelectedItems.Where(GetSelectString2).Where(i => i != null).ToList();
         }
 
         /// <summary>
@@ -103,36 +113,46 @@ namespace Microsoft.OData.UriParser
             List<string> selectList = selectExpandClause.GetCurrentLevelSelectList();
             List<T> expandList = new List<T>();
 
-            foreach (ExpandedNavigationSelectItem expandSelectItem in selectExpandClause.SelectedItems.Where(I => I.GetType() == typeof(ExpandedNavigationSelectItem)))
+            foreach (SelectItem selectItem in selectExpandClause.SelectedItems)
             {
-                string currentExpandClause = String.Join("/", expandSelectItem.PathToNavigationProperty.WalkWith(PathSegmentToStringTranslator.Instance).ToArray());
-                T subResult = default(T);
-                if (expandSelectItem.SelectAndExpand.SelectedItems.Any())
+                // $expand=..../$ref
+                ExpandedReferenceSelectItem expandRefItem = selectItem as ExpandedReferenceSelectItem;
+                if (expandRefItem != null)
                 {
-                    Traverse(expandSelectItem.SelectAndExpand, processSubResult, combineSelectAndExpand, processApply, out subResult);
+                    string currentExpandClause = String.Join("/", expandRefItem.PathToNavigationProperty.WalkWith(PathSegmentToStringTranslator.Instance).ToArray());
+                    currentExpandClause += "/$ref";
+
+                    var expandItem = processSubResult(currentExpandClause, default(T));
+                    if (expandItem != null)
+                    {
+                        expandList.Add(expandItem);
+                    }
+                    continue;
                 }
 
-                if (expandSelectItem.ApplyOption != null && processApply != null)
+                // $expand = ...
+                ExpandedNavigationSelectItem expandSelectItem = selectItem as ExpandedNavigationSelectItem;
+                if (expandSelectItem != null)
                 {
-                    subResult = processApply(expandSelectItem.ApplyOption);
-                }
+                    string currentExpandClause = String.Join("/", expandSelectItem.PathToNavigationProperty.WalkWith(PathSegmentToStringTranslator.Instance).ToArray());
+                    T subResult = default(T);
+                    if (expandSelectItem.SelectAndExpand.SelectedItems.Any())
+                    {
+                        Traverse(expandSelectItem.SelectAndExpand, processSubResult, combineSelectAndExpand, processApply, out subResult);
+                    }
 
-                var expandItem = processSubResult(currentExpandClause, subResult);
-                if (expandItem != null)
-                {
-                    expandList.Add(expandItem);
-                }
-            }
+                    if (expandSelectItem.ApplyOption != null && processApply != null)
+                    {
+                        subResult = processApply(expandSelectItem.ApplyOption);
+                    }
 
-            foreach (ExpandedReferenceSelectItem expandSelectItem in selectExpandClause.SelectedItems.Where(I => I.GetType() == typeof(ExpandedReferenceSelectItem)))
-            {
-                string currentExpandClause = String.Join("/", expandSelectItem.PathToNavigationProperty.WalkWith(PathSegmentToStringTranslator.Instance).ToArray());
-                currentExpandClause += "/$ref";
+                    var expandItem = processSubResult(currentExpandClause, subResult);
+                    if (expandItem != null)
+                    {
+                        expandList.Add(expandItem);
+                    }
 
-                var expandItem = processSubResult(currentExpandClause, default(T));
-                if (expandItem != null)
-                {
-                    expandList.Add(expandItem);
+                    continue;
                 }
             }
 
@@ -152,6 +172,7 @@ namespace Microsoft.OData.UriParser
             return String.Join(",", selectExpandClause.GetCurrentLevelSelectList().ToArray());
         }
 
+#if false
         /// <summary>
         /// Get the string representation of a select item (that isn't an expandedNavPropSelectItem
         /// </summary>
@@ -173,12 +194,77 @@ namespace Microsoft.OData.UriParser
             }
             else if (pathSelectItem != null)
             {
-                return String.Join("/", pathSelectItem.SelectedPath.WalkWith(PathSegmentToStringTranslator.Instance).ToArray());
+                IList<string> nextLevelSelectList = null;
+                if (pathSelectItem.SelectAndExpand != null)
+                {
+                    nextLevelSelectList = GetCurrentLevelSelectList(pathSelectItem.SelectAndExpand);
+                }
+
+                string test = String.Join("/", pathSelectItem.SelectedPath.WalkWith(PathSegmentToStringTranslator.Instance).ToArray());
+                if (nextLevelSelectList != null)
+                {
+                    Debug.Assert(nextLevelSelectList.Count == 1);
+                    string nextLevelString = nextLevelSelectList.First();
+                    return test + "/" + nextLevelString;
+                }
+                else
+                {
+                    return test;
+                }
             }
             else
             {
                 return null;
             }
+        }
+#endif
+        /// <summary>
+        /// Get the string representation of a select item (that isn't an expandedNavPropSelectItem
+        /// </summary>
+        /// <param name="selectedItem">the select item to translate</param>
+        /// <returns>the string representation of this select item, or null if the select item is an expandedNavPropSelectItem</returns>
+        private static IList<string> GetSelectString2(SelectItem selectedItem)
+        {
+            WildcardSelectItem wildcardSelect = selectedItem as WildcardSelectItem;
+            NamespaceQualifiedWildcardSelectItem namespaceQualifiedWildcard = selectedItem as NamespaceQualifiedWildcardSelectItem;
+            PathSelectItem pathSelectItem = selectedItem as PathSelectItem;
+
+            IList<string> returns = new List<string>();
+            if (wildcardSelect != null)
+            {
+                returns.Add("*");
+            }
+            else if (namespaceQualifiedWildcard != null)
+            {
+                returns.Add(namespaceQualifiedWildcard.Namespace + ".*");
+            }
+            else if (pathSelectItem != null)
+            {
+                IList<string> nextLevelSelectList = null;
+                if (pathSelectItem.SelectAndExpand != null)
+                {
+                    nextLevelSelectList = GetCurrentLevelSelectList(pathSelectItem.SelectAndExpand);
+                }
+
+                string test = String.Join("/", pathSelectItem.SelectedPath.WalkWith(PathSegmentToStringTranslator.Instance).ToArray());
+                if (nextLevelSelectList != null && nextLevelSelectList.Any())
+                {
+                    foreach (var a in nextLevelSelectList)
+                    {
+                        returns.Add(test + "/" + a);
+                    }
+                }
+                else
+                {
+                    returns.Add(test);
+                }
+            }
+            else
+            {
+                return null;
+            }
+
+            return returns;
         }
 
         /// <summary>

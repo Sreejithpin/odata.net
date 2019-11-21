@@ -516,6 +516,28 @@ namespace Microsoft.OData.Tests.UriParser.Binders
         }
 
         [Fact]
+        public void NestedSelectWithValidExpression2()
+        {
+            // Arrange
+            SelectToken select = ParseSelectToken("MyAddress($select=PostBoxPainting,Street,NextHome($select=MyNeighbors))");
+
+            // Act
+            SelectExpandClause clause = BinderForPerson.Bind(expandToken: null, selectToken: select);
+
+            var node = SelectedPropertiesNode.Create(clause);
+            Assert.NotNull(node);
+
+            // Arrange
+            select = ParseSelectToken("MyAddress/PostBoxPainting");
+
+            // Act
+            clause = BinderForPerson.Bind(expandToken: null, selectToken: select);
+
+            node = SelectedPropertiesNode.Create(clause);
+            Assert.NotNull(node);
+        }
+
+        [Fact]
         public void NestedSelectWithValidExpressionOnCollection()
         {
             // Arrange
