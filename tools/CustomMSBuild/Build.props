@@ -1,4 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <MSBuildTasksPath>$(MSBuildToolsPath)\Microsoft.Build.Tasks.v$(MSBuildToolsVersion).dll</MSBuildTasksPath>
+    <MSBuildTasksPath Condition="!Exists('$(MSBuildTasksPath)')">$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll</MSBuildTasksPath>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Define Basic Properties">
+    <EnlistmentRoot Condition=" '$(EnlistmentRoot)'=='' ">$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), build.root))</EnlistmentRoot>
+    <EnlistmentRoot>$(EnlistmentRoot.TrimEnd({'\\'}))</EnlistmentRoot>
+    <BuildExtensionsPath Condition=" '$(BuildExtensionsPath)'=='' ">$(MSBuildThisFileDirectory.TrimEnd('\'))</BuildExtensionsPath>
+    <CustomBuildExtensionsPath Condition=" '$(CustomBuildExtensionsPath)'=='' ">$(EnlistmentRoot)\tools\CustomMSBuild</CustomBuildExtensionsPath>
+  </PropertyGroup>
 
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">16.0</VisualStudioVersion>

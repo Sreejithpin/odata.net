@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29424.173
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.OData.Edm", "..\src\Microsoft.OData.Edm\Microsoft.OData.Edm.csproj", "{7D921888-FE03-4C3F-80FE-2F624505461C}"
 EndProject
@@ -12,11 +12,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.OData.Client", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.OData.TestCommon", "..\test\FunctionalTests\Microsoft.OData.TestCommon\Build.NetFramework\Microsoft.OData.TestCommon.csproj", "{9037FF4A-4636-41AA-BFA2-0930EF1563EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.OData.Edm.Tests", "..\test\FunctionalTests\Microsoft.OData.Edm.Tests\Build.NetFramework\Microsoft.OData.Edm.Tests.csproj", "{419F42FA-3313-46A7-B519-B2ED042B0F5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.OData.Edm.Tests", "..\test\FunctionalTests\Microsoft.OData.Edm.Tests\Build.NetFramework\Microsoft.OData.Edm.Tests.csproj", "{419F42FA-3313-46A7-B519-B2ED042B0F5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.OData.Core.Tests", "..\test\FunctionalTests\Microsoft.OData.Core.Tests\Build.NetFramework\Microsoft.OData.Core.Tests.csproj", "{C6547B28-DC0C-414B-A1D7-488FC8EA7B6C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Spatial.Tests", "..\test\FunctionalTests\Microsoft.Spatial.Tests\Build.NetFramework\Microsoft.Spatial.Tests.csproj", "{68C25902-0FBD-4694-9EE9-47F2219CE039}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.OData.Core.Tests", "..\test\FunctionalTests\Microsoft.OData.Core.Tests\Build.NetFramework\Microsoft.OData.Core.Tests.csproj", "{C6547B28-DC0C-414B-A1D7-488FC8EA7B6C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.OData.Client.Tests", "..\test\FunctionalTests\Microsoft.OData.Client.Tests\Microsoft.OData.Client.Tests.csproj", "{9F0AB290-8164-4885-BFCA-A6F87AB81740}"
 EndProject
@@ -29,6 +27,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unitTests", "unitTests", "{130A60C1-34E9-4F6C-90A6-CE646BF9C469}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "helper", "helper", "{B12AC8F3-9C8D-4343-A776-215D7C39DAED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Spatial.Tests", "..\test\FunctionalTests\Microsoft.Spatial.Tests\Microsoft.Spatial.Tests.csproj", "{2591C33A-52B1-4AA3-A84B-38495E754A42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,18 +143,6 @@ Global
 		{C6547B28-DC0C-414B-A1D7-488FC8EA7B6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6547B28-DC0C-414B-A1D7-488FC8EA7B6C}.Release|x64.ActiveCfg = Release|Any CPU
 		{C6547B28-DC0C-414B-A1D7-488FC8EA7B6C}.Release|x86.ActiveCfg = Release|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Cover|Any CPU.ActiveCfg = Release|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Cover|Any CPU.Build.0 = Release|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Cover|x64.ActiveCfg = Release|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Cover|x86.ActiveCfg = Release|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Release|x64.ActiveCfg = Release|Any CPU
-		{68C25902-0FBD-4694-9EE9-47F2219CE039}.Release|x86.ActiveCfg = Release|Any CPU
 		{9F0AB290-8164-4885-BFCA-A6F87AB81740}.Cover|Any CPU.ActiveCfg = Release|Any CPU
 		{9F0AB290-8164-4885-BFCA-A6F87AB81740}.Cover|Any CPU.Build.0 = Release|Any CPU
 		{9F0AB290-8164-4885-BFCA-A6F87AB81740}.Cover|x64.ActiveCfg = Release|Any CPU
@@ -179,6 +167,24 @@ Global
 		{50AA23B2-56EF-4C51-A270-8D5BD0C899B6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{50AA23B2-56EF-4C51-A270-8D5BD0C899B6}.Release|x64.ActiveCfg = Release|Any CPU
 		{50AA23B2-56EF-4C51-A270-8D5BD0C899B6}.Release|x86.ActiveCfg = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Cover|Any CPU.ActiveCfg = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Cover|Any CPU.Build.0 = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Cover|x64.ActiveCfg = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Cover|x64.Build.0 = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Cover|x86.ActiveCfg = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Cover|x86.Build.0 = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Debug|x64.Build.0 = Debug|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Debug|x86.Build.0 = Debug|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Release|x64.ActiveCfg = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Release|x64.Build.0 = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Release|x86.ActiveCfg = Release|Any CPU
+		{2591C33A-52B1-4AA3-A84B-38495E754A42}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -191,11 +197,11 @@ Global
 		{9037FF4A-4636-41AA-BFA2-0930EF1563EE} = {B12AC8F3-9C8D-4343-A776-215D7C39DAED}
 		{419F42FA-3313-46A7-B519-B2ED042B0F5C} = {130A60C1-34E9-4F6C-90A6-CE646BF9C469}
 		{C6547B28-DC0C-414B-A1D7-488FC8EA7B6C} = {130A60C1-34E9-4F6C-90A6-CE646BF9C469}
-		{68C25902-0FBD-4694-9EE9-47F2219CE039} = {130A60C1-34E9-4F6C-90A6-CE646BF9C469}
 		{9F0AB290-8164-4885-BFCA-A6F87AB81740} = {130A60C1-34E9-4F6C-90A6-CE646BF9C469}
 		{50AA23B2-56EF-4C51-A270-8D5BD0C899B6} = {B12AC8F3-9C8D-4343-A776-215D7C39DAED}
 		{130A60C1-34E9-4F6C-90A6-CE646BF9C469} = {6D9CCEF3-6509-4381-B104-1A3FA576297F}
 		{B12AC8F3-9C8D-4343-A776-215D7C39DAED} = {6D9CCEF3-6509-4381-B104-1A3FA576297F}
+		{2591C33A-52B1-4AA3-A84B-38495E754A42} = {130A60C1-34E9-4F6C-90A6-CE646BF9C469}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C6A51F5A-B7DB-4D01-AEE4-C8904965B635}
