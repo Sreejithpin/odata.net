@@ -1,7 +1,16 @@
-# Visual Studio build
-# Build with MSBuild and set the Visual Studio version property
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+
 - task: VSBuild@1
   inputs:
-    solution: '**\*.sln' #'sln\OData.Net45.sln'
+    solution: 'sln\OData.Net45.sln' #'sln\OData.Net45.sln'
     restoreNugetPackages: true
     msbuildArchitecture: 'x64'
