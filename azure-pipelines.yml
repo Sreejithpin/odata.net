@@ -15,4 +15,14 @@ steps:
     restoreNugetPackages: true
     msbuildArchitecture: 'x64'
     platform: 'x64'
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+
+
  
