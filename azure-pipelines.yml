@@ -15,7 +15,7 @@ steps:
     restoreNugetPackages: true
     msbuildArchitecture: 'x64'
     platform: 'x64'
-- 
+    
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
@@ -25,5 +25,3 @@ steps:
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     vsTestVersion: 'toolsInstaller'
-
- 
