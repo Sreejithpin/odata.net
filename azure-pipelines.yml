@@ -9,8 +9,10 @@ steps:
   displayName: 'Run a one-line script'
 
 
-- task: VSBuild@1
+- task: MSBuild@1
   inputs:
     solution: 'sln\OData.Net45.sln' #'sln\OData.Net45.sln'
     restoreNugetPackages: true
     msbuildArchitecture: 'x64'
+    platform: 'x64'
+ 
