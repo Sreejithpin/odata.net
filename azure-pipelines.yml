@@ -1,9 +1,7 @@
 # Visual Studio build
 # Build with MSBuild and set the Visual Studio version property
-
-
 - task: VSBuild@1
   inputs:
-    solution: 'sln/OData.Net45.sln'
+    solution: '**\*.sln' #'sln\OData.Net45.sln'
     restoreNugetPackages: true
     msbuildArchitecture: 'x64'
