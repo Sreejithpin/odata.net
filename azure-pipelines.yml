@@ -23,8 +23,8 @@ steps:
   inputs:
     solution: 'sln\OData.Net45.sln' #'sln\OData.Net45.sln'
     restoreNugetPackages: true
-    msbuildArchitecture: 'x64'
-    platform: 'x64'
+    # msbuildArchitecture: 'x64'
+    # platform: 'x64'
     
 # - task: VSTest@2
 #   inputs:
