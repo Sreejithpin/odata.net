@@ -8,10 +8,10 @@ trigger:
 - master
 
 pool:
-  #vmImage: 'windows-latest'
-  name: OData
-  demands:
-    - Agent.Name -equals ODataBuild26
+  vmImage: 'windows-latest'
+  #name: OData
+  #demands:
+  #  - Agent.Name -equals ODataBuild26
   
 
 variables:
@@ -21,6 +21,13 @@ variables:
   skipComponentGovernanceDetection: true
 
 steps:
+
+  - script: |
+    echo Write your commands here
+    echo Hello world
+    dotnet.exe
+    displayName: 'Command Line Script'
+
 # - task: PowerShell@2
 #   inputs:
 #     filePath: 'build.ps1'
