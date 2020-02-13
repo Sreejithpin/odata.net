@@ -10,10 +10,11 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
-# variables:
+variables:
 #   solution: 'sln\OData.Net45.sln'
 #   buildPlatform: 'Any CPU'
 #   buildConfiguration: 'Release'
+  skipComponentGovernanceDetection: true
 
 steps:
 # - task: PowerShell@2
