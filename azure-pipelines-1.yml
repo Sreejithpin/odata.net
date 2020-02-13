@@ -40,3 +40,4 @@ steps:
   inputs:
     command: 'test'
     projects: 'test\FunctionalTests\Microsoft.Spatial.Tests\Microsoft.Spatial.Tests.csproj'
+    arguments: '--collect "Code coverage"'
