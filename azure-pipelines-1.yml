@@ -59,10 +59,10 @@ steps:
 #     arguments: '--collect "Code coverage"'
 
 
-  - task: BatchScript@1
-    displayName: 'Run script - EnableSkipStrongName'
-    inputs:
-      filename: '$(Build.SourcesDirectory)\build.cmd'
-      arguments: EnableSkipStrongName
-      modifyEnvironment: false
+# #  - task: BatchScript@1
+# #    displayName: 'Run script - EnableSkipStrongName'
+# #    inputs:
+#       filename: '$(Build.SourcesDirectory)\build.cmd'
+#       arguments: EnableSkipStrongName
+#       modifyEnvironment: false
 
