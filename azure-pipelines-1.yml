@@ -23,8 +23,6 @@ variables:
 steps:
 
   - script: |
-    echo Write your commands here
-    echo Hello world
     dotnet.exe
    displayName: 'Command Line Script'
 
