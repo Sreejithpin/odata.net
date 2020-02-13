@@ -16,10 +16,10 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: PowerShell@2
-  inputs:
-    filePath: 'build.ps1'
-    arguments: 'EnableSkipStrongName'
+# - task: PowerShell@2
+#   inputs:
+#     filePath: 'build.ps1'
+#     arguments: 'EnableSkipStrongName'
 # - task: NuGetToolInstaller@1
 
 # - task: NuGetCommand@2
