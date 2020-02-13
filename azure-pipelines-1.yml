@@ -10,6 +10,8 @@ trigger:
 pool:
   #vmImage: 'windows-latest'
   name: OData
+  demands:
+  
 
 variables:
 #   solution: 'sln\OData.Net45.sln'
