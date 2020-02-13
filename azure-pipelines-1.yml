@@ -11,6 +11,7 @@ pool:
   #vmImage: 'windows-latest'
   name: OData
   demands:
+    - Agent.Name -equals ODataBuild26
   
 
 variables:
