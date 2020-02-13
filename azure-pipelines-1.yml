@@ -22,9 +22,15 @@ variables:
 
 steps:
 
-  - script: |
-    dotnet.exe
-   displayName: 'Command Line Script'
+- script: |
+   echo Write your commands here
+   
+   echo Hello world
+   
+   dotnet.exe
+   
+
+  displayName: 'Command Line Script'
 
 # - task: PowerShell@2
 #   inputs:
