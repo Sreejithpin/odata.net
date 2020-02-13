@@ -27,7 +27,7 @@ steps:
    
    echo Hello world
    
-   dotnet.exe
+   dotnet.exe --list-runtimes
    
 
   displayName: 'Command Line Script'
