@@ -35,3 +35,7 @@ steps:
 #       !**\obj\**
 #     searchFolder: '$(System.DefaultWorkingDirectory)'
 #     vsTestVersion: 'toolsInstaller'
+- task: VSTest@2
+  inputs:
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
