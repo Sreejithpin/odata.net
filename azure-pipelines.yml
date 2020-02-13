@@ -6,8 +6,8 @@
 trigger:
 - master
 
-# pool:
-#   vmImage: 'windows-latest'
+pool:
+  vmImage: 'windows-latest'
 
 variables:
   solution: 'sln\OData.Net45.sln'
@@ -35,7 +35,7 @@ steps:
 #       !**\obj\**
 #     searchFolder: '$(System.DefaultWorkingDirectory)'
 #     vsTestVersion: 'toolsInstaller'
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+# - task: VSTest@2
+#   inputs:
+#     platform: '$(buildPlatform)'
+#     configuration: '$(buildConfiguration)'
