@@ -33,7 +33,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
         /// <summary>
         /// Send query and verify the results from the service implemented using ODataLib and EDMLib.
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntitySet()
         {
             string uri = "People";
@@ -51,7 +51,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntity()
         {
             string uri = "People('russellwhyte')";
@@ -68,7 +68,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryContainedNavigationProperty()
         {
             string uri = "People('russellwhyte')/Trips";
@@ -85,7 +85,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryNavigationProperty()
         {
             string uri = "People('russellwhyte')/Friends";
@@ -103,7 +103,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CascadeNavigationProperty()
         {
             string uri = string.Format("People('scottketchum')/Trips(0)/PlanItems(11)/{0}Flight/Airline", NameSpacePrefix);
@@ -119,7 +119,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestAnyEndsWith()
         {
             string uri = "People?$filter=Emails/any(s:endswith(s, 'll@example.com'))";
@@ -150,7 +150,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void OpenEntity()
         {
             string[] userNames = { "scottketchum", "russellwhyte", "ronaldmundy" };
@@ -195,7 +195,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void OpenComplexType()
         {
             for (int i = 0; i < mimeTypes.Length; i++)
@@ -252,7 +252,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestAddTripPinNewPerson()
         {
             var mimeType = MimeTypes.ApplicationJson + MimeTypes.ODataParameterFullMetadata;
@@ -347,7 +347,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             Assert.Equal("VincentZhao", entry.Properties.Single(p => p.Name == "UserName").Value);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestAnyOnEntitySet()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -366,7 +366,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestAnyOnEntityCollectionProperty()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -395,7 +395,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestAllOnEntitySet()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -414,7 +414,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestAllOnEntityCollectionProperty()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -440,7 +440,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
 #if !(NETCOREAPP1_0 || NETCOREAPP2_0)
         // Move to another service, instead of trippin service.
-        // [Fact] // github issuse: #896
+        // //--Test007-- [Fact] // github issuse: #896
         public void TestNullableCollection()
         {
             var people = TestClientContext.People.First();
@@ -461,7 +461,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region function/action
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestActionTripPinShareTrip()
         {
             var writerSettings = new ODataMessageWriterSettings();
@@ -492,7 +492,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestFunctionGetFavoriteAirline()
         {
             string uri = string.Format("People('scottketchum')/{0}GetFavoriteAirline()", NameSpacePrefix);
@@ -508,7 +508,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestFunctionGetInvolvedPeople()
         {
             string uri = string.Format("People('russellwhyte')/Trips(0)/{0}GetInvolvedPeople()", NameSpacePrefix);
@@ -526,7 +526,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestFunctionGetFriendsTrips()
         {
             string uri = string.Format("People('russellwhyte')/{0}GetFriendsTrips(userName='ronaldmundy')", NameSpacePrefix);
@@ -543,7 +543,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestFunctionGetNearestAirport()
         {
             foreach (var mimeType in mimeTypes)
@@ -572,7 +572,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region $search Tests
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BasicSearchTest()
         {
             var predicate = new Func<IEnumerable<ODataResource>, string, bool>((entries, icaoCode) =>
@@ -596,7 +596,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void GroupSearchTest()
         {
             var predicate = new Func<IEnumerable<ODataResource>, string, bool>((entries, userName) =>
@@ -614,7 +614,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ExpandSearchTest()
         {
             const string PersonTypeName = NameSpacePrefix + "Person";
@@ -636,7 +636,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region Server-driven paging cases
 
-        [Fact]
+        //--Test007-- [Fact]
         public void SimpleUriNextLinkTest()
         {
             foreach (var mimeType in mimeTypes)
@@ -661,7 +661,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ComplexUriNextLinkTest()
         {
             foreach (var mimeType in mimeTypes)
@@ -686,7 +686,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FullSinglePageNextLinkTest()
         {
             foreach (var mimeType in mimeTypes)
@@ -711,7 +711,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void SmallSinglePageNextLinkTest()
         {
             foreach (var mimeType in mimeTypes)
@@ -736,7 +736,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BasicNextLinkHttpHeaderTest()
         {
             foreach (var mimeType in mimeTypes)
@@ -784,7 +784,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ComplexNextLinkHttpHeaderTest()
         {
             foreach (var mimeType in mimeTypes)
@@ -832,7 +832,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionNextLinkTest()
         {
             var uri = string.Format("Me/Trips(2)/{0}GetInvolvedPeople()", NameSpacePrefix);
@@ -882,7 +882,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void EntityReferenceNextLinkTest()
         {
             foreach (var mimeType in mimeTypes)
@@ -899,7 +899,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region Filter with properties on derived types
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FilterOnDerivedTypeTest()
         {
             var uri1 = string.Format("People('russellwhyte')/Trips(0)/PlanItems/{0}Flight?$filter=FlightNumber eq 'AA4035'", NameSpacePrefix);
@@ -922,7 +922,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region ETag create
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagCreate()
         {
             var entry = new CreateHelper(this)
@@ -940,7 +940,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region ETag delete
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagDeleteIfMatchOk()
         {
             const string uri = "People('russellwhyte')";
@@ -955,7 +955,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }.Execute();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagDeleteIfMatchAsterisk()
         {
             new DeleteHelper(this)
@@ -967,7 +967,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }.Execute();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagDeleteIfMatchWrong()
         {
             new DeleteHelper(this)
@@ -979,7 +979,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }.Execute();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagDeleteIfNoneMatchOk()
         {
             const string uri = "People('russellwhyte')";
@@ -994,7 +994,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }.Execute();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagDeleteIfNoneMatchAsterisk()
         {
             new DeleteHelper(this)
@@ -1006,7 +1006,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }.Execute();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagDeleteIfNoneMatchWrong()
         {
             new DeleteHelper(this)
@@ -1018,7 +1018,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }.Execute();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagDeleteNoIfMatchIfNoneMatch()
         {
             new DeleteHelper(this)
@@ -1033,7 +1033,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region ETag function
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagFunctionCollection()
         {
             var uri = string.Format("People('russellwhyte')/Trips(0)/{0}GetInvolvedPeople()", NameSpacePrefix);
@@ -1072,7 +1072,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region ETag query entity
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagQueryEntityIfMatch()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -1093,7 +1093,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagQueryEntityIfNoneMatchOk()
         {
             const string uri = "People('russellwhyte')";
@@ -1113,7 +1113,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagQueryEntityIfNoneMatchAsterisk()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -1130,7 +1130,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagQueryEntityIfNoneMatchWrong()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -1155,7 +1155,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region ETag query collection
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagQueryCollection()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -1191,7 +1191,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region ETag update
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagUpdateIfMatchOk()
         {
             const string uri = "People('russellwhyte')";
@@ -1212,7 +1212,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             // Assert.NotEqual(expectedETag, helper.ResponseETag);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagUpdateIfMatchAsterisk()
         {
             var helper = new UpdateHelper(this)
@@ -1228,7 +1228,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             AssertIsValidETag(helper.ResponseETag);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagUpdateIfMatchWrong()
         {
             new UpdateHelper(this)
@@ -1242,7 +1242,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }.Execute();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagUpdateIfNoneMatchOk()
         {
             const string uri = "People('russellwhyte')";
@@ -1259,7 +1259,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }.Execute();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagUpdateIfNoneMatchAsterisk()
         {
             var helper = new UpdateHelper(this)
@@ -1275,7 +1275,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             AssertIsValidETag(helper.ResponseETag);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagUpdateIfNoneMatchWrong()
         {
             var helper = new UpdateHelper(this)
@@ -1291,7 +1291,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             AssertIsValidETag(helper.ResponseETag);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ETagUpdateNoIfMatchIfNoneMatch()
         {
             new UpdateHelper(this)
@@ -1309,7 +1309,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
         #region ETag other tests
 
 #if !(NETCOREAPP1_0 || NETCOREAPP2_0)
-        [Fact]
+        //--Test007-- [Fact]
         public void AttachToWithEtag()
         {
             var context = TestClientContext;
@@ -1323,7 +1323,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             context.LoadProperty(attachToPeople, "Photo");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void SetEtagValueAfterQueryUpdate()
         {
             var context = CreateDefaultContainer();
@@ -1385,7 +1385,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             Assert.Equal(Microsoft.OData.Client.EntityStates.Deleted, context.GetEntityDescriptor(personToDelete).State);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateEntryWithIncorrectETag()
         {
             var defaultContext = this.CreateDefaultContext();
@@ -1437,7 +1437,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region $count Tests
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CountSimpleTest()
         {
             new QueryCountHelper(this)
@@ -1448,7 +1448,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
         }
 
         // TODO: enable the test case
-        //[Fact]
+        ////--Test007-- [Fact]
         //public void CountFilterTest()
         //{
         //    foreach (var mimeType in mimeTypes)
@@ -1466,7 +1466,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
         //    }
         //}
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CountTrueTest()
         {
             foreach (var mimeType in mimeTypes)
@@ -1493,7 +1493,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CountFalseTest()
         {
             foreach (var mimeType in mimeTypes)
@@ -1512,7 +1512,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CountErrorTest()
         {
             foreach (var mimeType in mimeTypes)
@@ -1529,7 +1529,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CountExpandTrueTest()
         {
             const string TypeNamePerson = NameSpacePrefix + "Person";
@@ -1564,7 +1564,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CountExpandFalseTest()
         {
             foreach (var mimeType in mimeTypes)
@@ -1603,7 +1603,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region Media entity
 
-        [Fact]
+        //--Test007-- [Fact]
         public void MediaEntity_Query()
         {
             var verification = new Action<ODataResource, bool, int[]>((entry, isFullMetadata, photoIds) =>
@@ -1647,7 +1647,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void MediaEntityStream_Query()
         {
             var entry = new QueryEntryHelper(this)
@@ -1689,7 +1689,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
         }
 
         // the case include both media entity and stream creation
-        [Fact]
+        //--Test007-- [Fact]
         public void MediaEntity_Create()
         {
             var bytes = new byte[] { 1, 2, 3, 4, 5 };
@@ -1760,7 +1760,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void MediaEntity_Update()
         {
             new UpdateHelper(this)
@@ -1791,7 +1791,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             Assert.Equal("New Photo", entry.Properties.Single(p => p.Name == "Name").Value);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void MediaEntityStream_Update()
         {
             var bytes = new byte[] { 1, 2, 3, 4, 5 };
@@ -1840,7 +1840,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
         }
 
         // the case tests both deletion of entity and stream
-        [Fact]
+        //--Test007-- [Fact]
         public void MediaEntity_Delete()
         {
             var queryStreamHelper = new QueryStreamHelper(this) { RequestUri = "Photos(1)/$value" };
@@ -1864,7 +1864,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region Insert annotation
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InsertAnnotation_OnNonInsertableEntitySet()
         {
             new CreateHelper(this)
@@ -1893,7 +1893,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region Delete annotation
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DeleteAnnotation_OnNonDeletableEntitySet()
         {
             new DeleteHelper(this)
@@ -1908,7 +1908,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region Acceptable media types annotation
 
-        [Fact]
+        //--Test007-- [Fact]
         public void AcceptableMediaTypeAnnotation_InvalidMediaType()
         {
             var bytes = new byte[] { 1, 2, 3, 4, 5 };
@@ -1937,7 +1937,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region Permission annotation
 
-        [Fact]
+        //--Test007-- [Fact]
         public void PermissionAnnotation_OnReadOnlyField()
         {
             const string uri = "People('russellwhyte')";
@@ -1974,7 +1974,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region Immutable annotation
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ImmutableAnnotation_OnImmutableField()
         {
             const string uri = "Airports('KSFO')";
@@ -2010,7 +2010,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region Computed annotation
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ComputedAnnotation_OnComputedField()
         {
             const string uri = "People('russellwhyte')";
@@ -2047,7 +2047,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         #region Delete link
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DeleteLink_SingleValuedNavigationProperty()
         {
             new DeleteLinkHelper(this)
@@ -2071,7 +2071,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             Assert.NotNull(target);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DeleteLink_CollectionValuedNavigationProperty()
         {
             var target = new QueryEntryHelper(this)
@@ -2103,7 +2103,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             Assert.NotNull(target);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DeleteLink_ContainedNavigationProperty()
         {
             var target = new QueryEntryHelper(this)

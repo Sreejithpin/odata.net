@@ -68,7 +68,7 @@ namespace Microsoft.Test.OData.Tests.Client
         }
 
 #if !PORTABLELIB && !SILVERLIGHT
-        [Fact]
+        //--Test007-- [Fact]
         public void LoadCollectionExceptionShouldNotRuinEntityTracking()
         {
             var ctxwrap = this.CreateWrappedContext<DefaultContainer>();
@@ -99,7 +99,7 @@ namespace Microsoft.Test.OData.Tests.Client
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CanContinueLoadEntityAfterLoadCollectionException()
         {
             var ctxwrap = this.CreateWrappedContext<DefaultContainer>();

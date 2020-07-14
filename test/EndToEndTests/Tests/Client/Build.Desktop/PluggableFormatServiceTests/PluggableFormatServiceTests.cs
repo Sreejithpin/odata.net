@@ -32,7 +32,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
         {
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryServiceDocument()
         {
             string[] types = new string[]
@@ -65,7 +65,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
         }
 
 #if ENABLE_AVRO
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryVCardEntityProperty()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings()
@@ -96,7 +96,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             Assert.Equal("Name1", resource.Properties.Single(p => p.Name == "N").Value);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryAvroEntity()
         {
             var requestMessage = new HttpWebRequestMessage(new Uri(ServiceBaseUri.AbsoluteUri + "People(31)", UriKind.Absolute));
@@ -150,7 +150,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             Assert.True(TestHelper.EntryEqual(expected, entry));
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryAvroFeed()
         {
             var requestMessage = new HttpWebRequestMessage(new Uri(ServiceBaseUri.AbsoluteUri + "Products", UriKind.Absolute));
@@ -195,7 +195,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             Assert.True(TestHelper.EntryEqual(product2, entries[2]));
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryWithAvroError()
         {
             var requestMessage = new HttpWebRequestMessage(new Uri(ServiceBaseUri.AbsoluteUri + "Products(-9)", UriKind.Absolute));
@@ -206,7 +206,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             Assert.Equal(204, responseMessage.StatusCode);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeAvroAction()
         {
             ODataResource product1 = new ODataResource

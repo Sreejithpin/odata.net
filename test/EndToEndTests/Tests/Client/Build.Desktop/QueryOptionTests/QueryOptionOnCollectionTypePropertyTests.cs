@@ -34,7 +34,7 @@ namespace Microsoft.Test.OData.Tests.Client.QueryOptionTests
 
         #region Test Method
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BasicQueryOptionTest()
         {
             //$skip
@@ -80,7 +80,7 @@ namespace Microsoft.Test.OData.Tests.Client.QueryOptionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void MiscQueryOptionTest()
         {
             ODataProperty property = this.TestsHelper.QueryProperty("Customers(1)/Numbers?$orderby=$it&$top=1", MimeType);
@@ -108,7 +108,7 @@ namespace Microsoft.Test.OData.Tests.Client.QueryOptionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FilterOnCollectionCountTest()
         {
             var person = TestClientContext.People.Where(p => p.Emails.Count == 2) as DataServiceQuery<Person>;
@@ -124,7 +124,7 @@ namespace Microsoft.Test.OData.Tests.Client.QueryOptionTests
             Assert.True(custoemers.RequestUri.OriginalString.EndsWith("/Customers?$filter=Orders/$count eq 2"));
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void OrderbyOnCollectionCountTest()
         {
             var person = TestClientContext.People.OrderBy(p => p.Emails.Count) as DataServiceQuery<Person>;

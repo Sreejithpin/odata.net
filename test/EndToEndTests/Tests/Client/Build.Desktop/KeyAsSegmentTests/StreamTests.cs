@@ -21,7 +21,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
         }
         private static readonly byte[] binaryTestData = new byte[] { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f };
 
-        [Fact]
+        //--Test007-- [Fact]
         public void GetReadStreamFromMle()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -35,7 +35,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void GetReadStreamUriFromMle()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -49,7 +49,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void GetReadStreamFromNamedStreamProperty()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -59,7 +59,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             VerifyStreamReadable(streamResponse.Stream);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void SetSaveStreamOnMle()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -71,7 +71,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             contextWrapper.SaveChanges();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void SetSaveStreamOnNamedStreamProperty()
         {
             var contextWrapper = this.CreateWrappedContext();

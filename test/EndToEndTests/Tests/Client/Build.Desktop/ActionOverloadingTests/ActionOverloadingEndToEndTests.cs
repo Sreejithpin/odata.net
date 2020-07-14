@@ -23,7 +23,7 @@ namespace Microsoft.Test.OData.Tests.Client.ActionOverloadingTests
         {
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ExecuteOverloadedOperations()
         {
             string actionName = "RetrieveProduct";
@@ -49,7 +49,7 @@ namespace Microsoft.Test.OData.Tests.Client.ActionOverloadingTests
             int orderLineActionResult = contextWrapper.Execute<int>(orderLineOperationDescriptor.Target, "POST", true).Single();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ExecuteOverloadedActionNotBound()
         {
             for (int i = 0; i < 2; i++)
@@ -66,7 +66,7 @@ namespace Microsoft.Test.OData.Tests.Client.ActionOverloadingTests
         }
 
 #if !(NETCOREAPP1_0 || NETCOREAPP2_0)
-        [Fact]
+        //--Test007-- [Fact]
         public void ExecuteActionImport()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -76,7 +76,7 @@ namespace Microsoft.Test.OData.Tests.Client.ActionOverloadingTests
         }
 #endif
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ExcuteBoundAction()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -98,7 +98,7 @@ namespace Microsoft.Test.OData.Tests.Client.ActionOverloadingTests
 #endif
         }
 
-        [Fact] 
+        //--Test007-- [Fact] 
         public void ExecuteOverloadedActionsOnBaseAndDerivedTypes()
         {
             string actionName = "UpdatePersonInfo";
@@ -150,7 +150,7 @@ namespace Microsoft.Test.OData.Tests.Client.ActionOverloadingTests
             this.ExecuteActions(contextWrapper, contractorDescriptors);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ExecuteEntitySetBoundOverloadedOperations()
         {
             for (int i = 1; i < 2; i++)
@@ -175,7 +175,7 @@ namespace Microsoft.Test.OData.Tests.Client.ActionOverloadingTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ExecuteOverloadedActionsWithDifferentParameter()
         {
             string actionName = "IncreaseEmployeeSalary";
@@ -208,7 +208,7 @@ namespace Microsoft.Test.OData.Tests.Client.ActionOverloadingTests
             contextWrapper.Execute<int>(specialEmployeeDescriptors.Where(d => d.Target.AbsoluteUri.Contains(".SpecialEmployee")).Single().Target, "POST", true).Single();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void OverloadedActionsProjection()
         {
             for (int i = 1; i < 2; i++)
@@ -230,7 +230,7 @@ namespace Microsoft.Test.OData.Tests.Client.ActionOverloadingTests
         }
 
         // Inconsistent behavior when selecting namespace.* and action name
-        // [Fact] // github issuse: #896
+        // //--Test007-- [Fact] // github issuse: #896
         public void BaseDerivedTypeOverloadedActionsProjection()
         {
             string actionName = "UpdatePersonInfo";

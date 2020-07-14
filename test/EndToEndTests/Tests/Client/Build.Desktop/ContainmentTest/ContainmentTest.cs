@@ -39,7 +39,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             };
 
         #region Query
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryContainedEntity()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -71,7 +71,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CallFunctionBoundedToContainedEntity()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -89,7 +89,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CallFunctionWhichReturnsContainedEntity()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -123,7 +123,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeActionReturnsContainedEntity()
         {
             var writerSettings = new ODataMessageWriterSettings();
@@ -174,7 +174,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryContainedEntitySet()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -217,7 +217,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QuerySpecificEntityInContainedEntitySet()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -249,7 +249,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryLevel2ContainedEntity()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -282,7 +282,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryLevel2ContainedEntitySet()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -321,7 +321,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryLeve2NonContainedEntity()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -355,7 +355,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryLevel2Singleton()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -394,7 +394,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryContainedEntityWithDerivedTypeCast()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -425,7 +425,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryContainedEntitySetWithDerivedTypeCast()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -461,7 +461,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryContainedEntitiesInDerivedTypeEntity()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -497,7 +497,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityContainsContainmentSet()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -528,7 +528,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryFeedContainsContainmentSet()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -567,7 +567,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryIndividualPropertyOfContainedEntity()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -589,7 +589,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryContainedEntitiesWithFilter()
         {
             Dictionary<string, bool> testCases = new Dictionary<string, bool>()
@@ -639,7 +639,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryContainedEntitiesWithOrderby()
         {
             Dictionary<string, bool> testCases = new Dictionary<string, bool>()
@@ -691,7 +691,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityAndExpandContainedEntity()
         {
             Dictionary<string, int[]> testCases = new Dictionary<string, int[]>()
@@ -797,7 +797,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryContainedEntityWithSelectOption()
         {
             Dictionary<string, int> testCases = new Dictionary<string, int>()
@@ -850,7 +850,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
         #endregion
 
         #region Create/Update/Delete
-        [Fact]
+        //--Test007-- [Fact]
         public void CreateAndDeleteContainmentEntity()
         {
             // create entry and insert
@@ -903,7 +903,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CreateSingleValuedContainedEntity()
         {
             // create entry and insert
@@ -949,7 +949,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateContainmentEntity()
         {
             // create entry and insert
@@ -994,7 +994,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
         }
 
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpsertContainmentEntity()
         {
             // create entry and insert
@@ -1047,7 +1047,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
 
         #region OData Client test cases
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryContainedEntityFromODataClient()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1061,7 +1061,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             Assert.Equal("AAA123A", result[0].GiftCardNO);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryContainedEntitySetFromODataClient()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1075,7 +1075,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             Assert.Equal("103 second PI", result[1].FriendlyName);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QuerySpecificEntityInContainedEntitySetFromODataClient()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1090,7 +1090,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryIndividualPropertyOfContainedEntityFromODataClient()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1103,7 +1103,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void LinqUriTranslationTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1157,7 +1157,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             var q10Result = q10.ToList();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CallFunctionBoundToContainedEntityFromODataClient()
         {
             double result = TestClientContext.Execute<double>(new Uri(ServiceBaseUri.AbsoluteUri +
@@ -1167,7 +1167,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CallFunctionFromODataClientWhichReturnsContainedEntity()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1184,7 +1184,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             Assert.Equal("Random Name", result.FriendlyName);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeActionFromODataClientWhichReturnsContainedEntity()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1202,7 +1202,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             Assert.Equal("Random Name", result.FriendlyName);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CreateContainedEntityFromODataClientUsingAddRelatedObject()
         {
 
@@ -1238,7 +1238,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
                 Assert.Equal("110's first PI", piResult.FriendlyName);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DeleteContainedEntityFromODataClientUsingDeleteObject()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1275,7 +1275,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             Assert.Empty(piResult2);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateContainedEntityFromODataClientUsingUpdateObject()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1292,7 +1292,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
             Assert.Equal("Michael's first PI", piResult.FriendlyName);
         }
 
-        // [Fact] // github issuse: #896
+        // //--Test007-- [Fact] // github issuse: #896
         internal void CreateContainedEntityFromODataClientUsingAddRelatedObjectUsingBatchRequest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1326,7 +1326,7 @@ namespace Microsoft.Test.OData.Tests.Client.ContainmentTest
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CreateContainedNonCollectionEntityFromODataClientUsingUpdateRelatedObject()
         {
             TestClientContext.Format.UseJson(Model);

@@ -31,7 +31,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             base.CustomTestInitialize();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void AddCustomHeader()
         {
             string headerName = "MyNewHeader";
@@ -55,7 +55,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             Assert.Equal(headerValue, header.Value);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ChangeMergeToPatch()
         {
             Func<DataServiceClientRequestMessageArgs, DataServiceClientRequestMessage> addHeader = 
@@ -94,7 +94,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             Assert.Equal("PATCH", this.lastRequestMessage.Method);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void HttpMergeIsNoLongerSupported()
         {
             Func<DataServiceClientRequestMessageArgs, DataServiceClientRequestMessage> addHeader =

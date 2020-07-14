@@ -36,7 +36,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BooleanTest()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -48,7 +48,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DateTimeOffsetTest()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -60,7 +60,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DecimalTest()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -72,7 +72,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DoubleTest()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -89,7 +89,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void Int16Test()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -101,7 +101,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void Int32Test()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -113,7 +113,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void Int64Test()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -125,7 +125,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void SingleTest()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -142,7 +142,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void StringTest()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -166,7 +166,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             Assert.Equal(this.ServiceUri.AbsoluteUri + entitySetName + "/''Hello''", query.ToString());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TimeTest()
         {
             var contextWrapper = this.CreateWrappedContext();

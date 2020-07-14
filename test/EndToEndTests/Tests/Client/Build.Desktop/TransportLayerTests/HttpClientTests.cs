@@ -23,7 +23,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
         }
 
 #if !WIN8 && !WINDOWSPHONE && !(NETCOREAPP1_0 || NETCOREAPP2_0)
-        [Fact]
+        //--Test007-- [Fact]
         public void SimpleQuery()
         {
             var ctx = this.CreateContext();
@@ -31,7 +31,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             Assert.True(results.Count > 0, "No results returned");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InsertNewEntity()
         {
             var ctx = this.CreateContext();
@@ -39,7 +39,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             ctx.SaveChanges();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateEntityWithPatch()
         {
             var ctx = this.CreateContext();
@@ -50,7 +50,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             ctx.SaveChanges();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateEntityWithReplaceUsingJson()
         {
             var ctx = this.CreateContext();
@@ -63,7 +63,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             ctx.SaveChanges(SaveChangesOptions.ReplaceOnUpdate);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DeleteEntity()
         {
             var ctx = this.CreateContext();
@@ -71,7 +71,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             ctx.SaveChanges();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void MultipleChangesBatch()
         {
             var ctx = this.CreateContext();
@@ -85,7 +85,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             ctx.SaveChanges(SaveChangesOptions.BatchWithSingleChangeset);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void MultipleChangesNonBatch()
         {
             var ctx = this.CreateContext();
@@ -99,7 +99,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             ctx.SaveChanges();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void LoadProperty()
         {
             var ctx = this.CreateContext();
@@ -111,7 +111,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
         }
 #endif
 
-        [Fact]
+        //--Test007-- [Fact]
         public void SimpleQueryAsync()
         {
             var ctx = this.CreateContext();
@@ -128,7 +128,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             this.WaitForTestToComplete();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateEntityAsync()
         {
             var ctx = this.CreateContext();
@@ -152,7 +152,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             this.WaitForTestToComplete();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BatchQueriesWithJsonAsync()
         {
             var ctx = this.CreateContext();
@@ -178,7 +178,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             this.WaitForTestToComplete();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void LoadPropertyAsync()
         {
             var ctx = this.CreateContext();
@@ -202,7 +202,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             this.WaitForTestToComplete();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BatchUpdatesAsync()
         {
             var ctx = this.CreateContext();
@@ -235,7 +235,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             this.WaitForTestToComplete();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void MultipleUpdatesWithPostTunnelingAsync()
         {
             var ctx = this.CreateContext();
@@ -273,7 +273,7 @@ namespace Microsoft.Test.OData.Tests.Client.TransportLayerTests
             this.WaitForTestToComplete();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         //Client should not append () to navigation property query URI
         public void ClientShouldAppendParenthesisToNavigationPropertyQueryUri()
         {

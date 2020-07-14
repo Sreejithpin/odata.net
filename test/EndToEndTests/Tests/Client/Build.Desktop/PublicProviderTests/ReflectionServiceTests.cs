@@ -28,7 +28,7 @@ namespace Microsoft.Test.OData.Tests.Client.PublicProviderTests
         }
 
 #if !(NETCOREAPP1_0 || NETCOREAPP2_0)
-        [Fact]
+        //--Test007-- [Fact]
         public void ValidReadReflectionEntity()
         {
             var context = CreateWrappedContext<DefaultContainer>().Context;
@@ -43,7 +43,7 @@ namespace Microsoft.Test.OData.Tests.Client.PublicProviderTests
             Assert.NotNull(context.PersonMetadata.Expand("Person").FirstOrDefault().Person);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ValidCUDReflectionEntity()
         {
             string desc = Guid.NewGuid().ToString();
@@ -94,7 +94,7 @@ namespace Microsoft.Test.OData.Tests.Client.PublicProviderTests
         }
 #endif
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ValidMetadata()
         {
             var message = new HttpWebRequestMessage(new Uri(ServiceUri + "$metadata"));
@@ -115,7 +115,7 @@ namespace Microsoft.Test.OData.Tests.Client.PublicProviderTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ValidServiceDocument()
         {
             var metadataMessage = new HttpWebRequestMessage(new Uri(ServiceUri + "$metadata"));

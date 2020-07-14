@@ -24,7 +24,7 @@ namespace Microsoft.Test.OData.Tests.Client.ModelReferenceTests
 
         // Query set - Create entity - Get created entity - Update entity - Delete entity of set in referenced entity container
         // But type declared in main model
-        [Fact]
+        //--Test007-- [Fact]
         public void EntitySetDeclaredInReferencedModelE2E()
         {
             // Query Entity Set in GPS
@@ -96,7 +96,7 @@ namespace Microsoft.Test.OData.Tests.Client.ModelReferenceTests
 
         // Query set - Create entity - Get created entity - Update entity - Delete entity of set in main entity container
         // But type declared in referenced model
-        [Fact]
+        //--Test007-- [Fact]
         public void TypeDeclaredInReferencedModelE2E()
         {
             // Query VehicleGPSSet
@@ -168,7 +168,7 @@ namespace Microsoft.Test.OData.Tests.Client.ModelReferenceTests
 
         // Query set - Create entity - Get created entity - Update entity - Delete entity of set in main entity container
         // Type defined in main container, but derived from type referenced model
-        [Fact]
+        //--Test007-- [Fact]
         public void EntitySetDerivedFromTypeDeclaredInReferencedE2E()
         {
             // Query VehicleGPSSet
@@ -239,7 +239,7 @@ namespace Microsoft.Test.OData.Tests.Client.ModelReferenceTests
             Assert.Equal(2, derivedVehicleGPSSet.Count());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryProperty()
         {
             // Load property and navigation property from type declared in main model
@@ -259,7 +259,7 @@ namespace Microsoft.Test.OData.Tests.Client.ModelReferenceTests
             Assert.Equal("DisplayName4", displayName);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void AddNavigationProperty()
         {
             TestClientContext.MergeOption = MergeOption.OverwriteChanges;
@@ -351,7 +351,7 @@ namespace Microsoft.Test.OData.Tests.Client.ModelReferenceTests
             Assert.Equal(2, truck.VehicleGPSGroupFromGPS.Count);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TypeCast()
         {
             // Cast type from referenced model to type

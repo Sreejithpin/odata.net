@@ -70,7 +70,7 @@ namespace Microsoft.Test.OData.Tests.Client.PipelineEventsTests
         /// <summary>
         /// This test covers modifying ODataEntry to have null complex property
         /// </summary>
-        // [Fact] // github issuse: #896
+        // //--Test007-- [Fact] // github issuse: #896
         internal void QueryEntitySetNull()
         {
             this.RunOnAtomAndJsonFormats(CreateContext, QueryEntitySetNull);
@@ -566,7 +566,7 @@ namespace Microsoft.Test.OData.Tests.Client.PipelineEventsTests
         /// <summary>
         /// Verify delegate behavior of error response, inner error in batch response, in-stream error in response
         /// </summary>
-        // [Fact] // github issuse: #896
+        // //--Test007-- [Fact] // github issuse: #896
         // there is not feed id when using json format.
         internal void ErrorResponseTest()
         {

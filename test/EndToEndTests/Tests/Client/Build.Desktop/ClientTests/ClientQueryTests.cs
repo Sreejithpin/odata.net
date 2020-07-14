@@ -68,7 +68,7 @@ namespace Microsoft.Test.OData.Tests.Client
         }
 
 
-        [Fact]
+        [Fact]//--Test007-- [Fact]
         public void ContainsUrlTest()
         {
             var testlists = new List<KeyValuePair<string, int>>()
@@ -93,7 +93,7 @@ namespace Microsoft.Test.OData.Tests.Client
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ContainsLinqTest()
         {
             var context = this.CreateContext().Context;
@@ -106,7 +106,7 @@ namespace Microsoft.Test.OData.Tests.Client
             Assert.Equal(10, result.Count());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void PrimitiveTypeInRequestUrlTest()
         {
             const string stringOfCast = "cast(PersonId,'Edm.Byte')";
@@ -125,7 +125,7 @@ namespace Microsoft.Test.OData.Tests.Client
             Assert.Equal(2, result.Count());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ContainsErrorTest()
         {
             string[] errorUrls =
@@ -150,7 +150,7 @@ namespace Microsoft.Test.OData.Tests.Client
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityNavigationWithImplicitKeys()
         {
             // this test is to baseline the WCF Data Service behavior that is not modified to support implicit keys 
@@ -277,7 +277,7 @@ namespace Microsoft.Test.OData.Tests.Client
         //    Assert.False(someItemNotTracked, "All items should have been tracked.");
         //}
 
-        [Fact]
+        //--Test007-- [Fact]
         public void GetAllPagesTest()
         {
             var context = this.CreateContext().Context;
@@ -340,7 +340,7 @@ namespace Microsoft.Test.OData.Tests.Client
             Assert.Equal(allCustomersCount - 4, queryCustomersCount);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void PagingOnNavigationProperty()
         {
             var context = this.CreateContext().Context;
@@ -371,7 +371,7 @@ namespace Microsoft.Test.OData.Tests.Client
             Assert.Equal(allOrdersCount, queryOrderCount);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void GetParitalPagesTest()
         {
             var context = this.CreateContext().Context;
@@ -397,7 +397,7 @@ namespace Microsoft.Test.OData.Tests.Client
             Assert.Equal(2, sentRequestCount);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DuplicateQueryTest()
         {
             var contextWrapper = this.CreateContext();
@@ -415,7 +415,7 @@ namespace Microsoft.Test.OData.Tests.Client
             Assert.Single(entryResults);
         }
 
-        //[Fact]
+        ////--Test007-- [Fact]
         //public void LoadNavigationPropertyAllPagesTest()
         //{
         //    var context = this.CreateContext().Context;

@@ -29,7 +29,7 @@ namespace Microsoft.Test.OData.Tests.Client
         {
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateOpenTypeWithUndeclaredProperties()
         {
             SetContextWrapper();
@@ -44,7 +44,7 @@ namespace Microsoft.Test.OData.Tests.Client
             // No more check, this case is to make sure that client doesn't throw exception.
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void AddOpenTypeWithUndeclaredProperties()
         {
             SetContextWrapper();

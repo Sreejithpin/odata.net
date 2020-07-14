@@ -36,7 +36,7 @@ namespace Microsoft.Test.OData.Tests.Client.UriBuilderTests
             return model;
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ODataUriBuilderWithEntitySet()
         {
             Uri fullUri = new Uri("http://www.example.com/People?$filter=MyDog%2FColor%20eq%20%27Brown%27&$select=ID&$expand=MyDog%2CMyCat/$ref&$orderby=ID&$top=1&$skip=2&$count=true&$search=FA");
@@ -98,7 +98,7 @@ namespace Microsoft.Test.OData.Tests.Client.UriBuilderTests
             Assert.Equal(new Uri("http://www.example.com/People?$filter=MyDog%2FColor%20eq%20%27Brown%27&$select=ID%2CMyCat&$expand=MyDog%2CMyCat%2F%24ref&$orderby=ID&$top=1&$skip=2&$count=true&$search=FA"), actualUri);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TestODataUriBuilderWithKeySegment()
         {
             Uri fullUri = new Uri("http://www.example.com/People(1)?$filter=MyDog%2FColor%20eq%20%27Brown%27&$select=ID&$expand=MyDog%2CMyCat/$ref&$orderby=ID&$top=1&$skip=2&$count=true&$search=FA");
@@ -163,7 +163,7 @@ namespace Microsoft.Test.OData.Tests.Client.UriBuilderTests
             Assert.Equal(new Uri("http://www.example.com/People(1)?$filter=MyDog%2FColor%20eq%20%27Brown%27&$select=ID%2CMyCat&$expand=MyDog%2CMyCat%2F%24ref&$orderby=ID&$top=1&$skip=2&$count=true&$search=FA"), actualUri);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ODataUriBuilderWithKeyAsSegment()
         {
             Uri fullUri = new Uri("http://www.example.com/People/1?$filter=MyDog%2FColor%20eq%20%27Brown%27&$select=ID&$expand=MyDog%2CMyCat/$ref&$top=1&$skip=2&$count=false");
@@ -221,7 +221,7 @@ namespace Microsoft.Test.OData.Tests.Client.UriBuilderTests
             Assert.Equal(new Uri("http://www.example.com/People/1?$filter=MyDog%2FColor%20eq%20%27Brown%27&$select=ID%2CMyCat&$expand=MyDog%2CMyCat%2F%24ref&$top=1&$skip=2&$count=false"), actualUri);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RelativeUriBuildWithEmptyQueryOptions()
         {
             Uri queryUri = new Uri("People", UriKind.Relative);
@@ -234,7 +234,7 @@ namespace Microsoft.Test.OData.Tests.Client.UriBuilderTests
             Assert.Equal(queryUri, actualUri);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void AbsoluteUriBuildWithEmptyQueryOptions()
         {
             Uri queryUri = new Uri("http://www.example.com/People");

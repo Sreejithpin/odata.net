@@ -204,7 +204,7 @@ namespace Microsoft.Test.OData.Tests.Client.PipelineEventsTests
         /// <summary>
         /// This test verifies that user can modify entry in a delegate in the case of LoadProperty.
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void LoadPropertyTestAsync()
         {
             for (int i = 0; i < 1; i++)

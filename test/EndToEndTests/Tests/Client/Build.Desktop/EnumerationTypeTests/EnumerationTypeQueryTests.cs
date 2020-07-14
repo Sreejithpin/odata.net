@@ -30,7 +30,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntitySet()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -75,7 +75,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QuerySpecificEntity()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -116,7 +116,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEnumProperty()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -145,7 +145,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEnumPropertyValue()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -162,7 +162,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeActionWithEnumParameterAndReturnType()
         {
             var writerSettings = new ODataMessageWriterSettings();
@@ -207,7 +207,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CallUnboundFunctionWhichReturnsEnumValue()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -237,7 +237,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntitiesFilterByEnumProperty()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -277,7 +277,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntitiesOrderByEnumProperty()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -319,7 +319,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntitiesSelectEnumProperty()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -361,7 +361,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
         #region client operations
 
 #if !(NETCOREAPP1_0 || NETCOREAPP2_0)
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntitySetFromODataClient()
         {
             for (int i = 1; i < 2; i++)
@@ -386,7 +386,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityFromODataClient()
         {
             for (int i = 1; i < 2; i++)
@@ -410,7 +410,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEnumPropertyFromODataClient()
         {
             for (int i = 1; i < 2; i++)
@@ -431,7 +431,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEnumCollectionPropertyFromODataClient()
         {
             for (int i = 1; i < 2; i++)
@@ -454,7 +454,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntitiesWithQueryOptionsFromODataClient()
         {
             // MinimalMetadata: UseJson() + no $select in request uri
@@ -496,7 +496,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             Assert.Equal(result.Select(s => s.ProductID).Distinct().Count(), result.Count);
         }
 
-       [Fact]
+       //--Test007-- [Fact]
         public void QueryEntitiesWithFilterFromODataClient()
         {
             var products = TestClientContext.Products.ToList();
@@ -547,7 +547,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             Assert.Equal(products.Where(p => p.CoverColors.All(c => c == Color.Blue)).Count(), result.Count);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntitiesWithOrderByFromODataClient()
         {
             var products = TestClientContext.Products.ToList();
@@ -571,7 +571,7 @@ namespace Microsoft.Test.OData.Tests.Client.EnumerationTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntitiesWithSelectFromODataClient()
         {
             var products = TestClientContext.Products.ToList();

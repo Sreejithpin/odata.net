@@ -27,7 +27,7 @@ namespace Microsoft.Test.OData.Tests.Client.AsyncRequestTests
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void AsyncQueryRequestTest()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -95,7 +95,7 @@ namespace Microsoft.Test.OData.Tests.Client.AsyncRequestTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void AsyncCreateRequestTest()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -218,7 +218,7 @@ namespace Microsoft.Test.OData.Tests.Client.AsyncRequestTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void AsyncBatchRequestTest()
         {
             var writerSettings = new ODataMessageWriterSettings();

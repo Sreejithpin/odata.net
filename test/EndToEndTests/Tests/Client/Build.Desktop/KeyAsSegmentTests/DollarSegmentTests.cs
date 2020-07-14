@@ -22,7 +22,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
         {
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InsertEntityWithKeyValueSameAsNavigationPropertyName()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -35,35 +35,35 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             Assert.True(newLogin == loginQuery.Single(), "Query result does not equal newly added login");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ClientExecuteEntitySetDerivedType()
         {
             var contextWrapper = this.CreateWrappedContext();
             var discontinuedProductQuery = contextWrapper.Execute<DiscontinuedProduct>(new Uri(this.ServiceUri + "/Product/$/Microsoft.Test.OData.Services.AstoriaDefaultService.DiscontinuedProduct")).ToArray();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ClientExecuteEntitySetDerivedTypeDollarSegmentAtEnd()
         {
             var contextWrapper = this.CreateWrappedContext();
             var discontinuedProductQuery = contextWrapper.Execute<DiscontinuedProduct>(new Uri(this.ServiceUri + "/Product/$/Microsoft.Test.OData.Services.AstoriaDefaultService.DiscontinuedProduct/$")).ToArray();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ClientExecuteProjectPropertyDefinedOnDerivedType()
         {
             var contextWrapper = this.CreateWrappedContext();
             var discontinuedProductDatesQuery = contextWrapper.Execute<DiscontinuedProduct>(new Uri(this.ServiceUri + "/Product/$/Microsoft.Test.OData.Services.AstoriaDefaultService.DiscontinuedProduct?$select=Discontinued")).ToArray();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ClientExecuteProjectPropertyDefinedOnDerivedTypeMultipleDollarSegments()
         {
             var contextWrapper = this.CreateWrappedContext();
             var discontinuedProductDatesQuery = contextWrapper.Execute<DiscontinuedProduct>(new Uri(this.ServiceUri + "/Product/$/$/$/Microsoft.Test.OData.Services.AstoriaDefaultService.DiscontinuedProduct?$select=Discontinued")).ToArray();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeFeedBoundActionDefinedOnDerivedType()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -76,7 +76,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
                     }); 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeEntryBoundActionDefinedOnDerivedType()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -86,7 +86,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
                 new OperationParameter[] { }); 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeActionDefinedOnDerivedTypeMultipleDollarSegments()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -99,7 +99,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
                     }); 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeActionDefinedOnDerivedTypeDollarSegmentAtUriEnd()
         {
             var contextWrapper = this.CreateWrappedContext();

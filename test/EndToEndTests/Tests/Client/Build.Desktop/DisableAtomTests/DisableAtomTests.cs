@@ -30,55 +30,55 @@ namespace Microsoft.Test.OData.Tests.Client.DisableAtomTests
 
         #region Test method
 
-        [Fact]
+        //--Test007-- [Fact]
         public void GetServiceDocumentUsingAtomShouldBeFailed()
         {
             VerifyAtomBeDisabledQueryTest(string.Empty);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntitySetUsingAtomShouldBeFailed()
         {
             VerifyAtomBeDisabledQueryTest("People");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CountUsingAtomShouldBeFailed()
         {
             VerifyAtomBeDisabledQueryTest("People/$count");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityUsingAtomShouldBeFailed()
         {
             VerifyAtomBeDisabledQueryTest("People(1)");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryComplexPropertyUsingAtomShouldBeFailed()
         {
             VerifyAtomBeDisabledQueryTest("People(1)/HomeAddress");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryPrimitivePropertyUsingAtomShouldBeFailed()
         {
             VerifyAtomBeDisabledQueryTest("People(1)/FirstName");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FilterUsingAtomShouldBeFailed()
         {
             VerifyAtomBeDisabledQueryTest("People?$filter=FirstName eq 'Bob'");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void OrderByUsingAtomShouldBeFailed()
         {
             VerifyAtomBeDisabledQueryTest("People?$orderby=FirstName");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateUsingAtomShouldBeFailed()
         {
             var entryWrapper = new ODataResourceWrapper()
@@ -145,7 +145,7 @@ namespace Microsoft.Test.OData.Tests.Client.DisableAtomTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void PostUsingAtomShouldBeFailed()
         {
             var entryWrapper = new ODataResourceWrapper()
@@ -252,7 +252,7 @@ namespace Microsoft.Test.OData.Tests.Client.DisableAtomTests
         }
 
         // [Ignore] // Remove Atom
-        // [Fact] // github issuse: #896
+        // //--Test007-- [Fact] // github issuse: #896
         public void QueryUsingAtomShouldBeFailedClientTest()
         {
             // TestClientContext.Format.UseAtom();
@@ -273,7 +273,7 @@ namespace Microsoft.Test.OData.Tests.Client.DisableAtomTests
 
 #if !(NETCOREAPP1_0 || NETCOREAPP2_0)
         // [Ignore] // Remove Atom
-        // [Fact] // github issuse: #896
+        // //--Test007-- [Fact] // github issuse: #896
         public void UpdateUsingAtomShouldBeFailedClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -303,7 +303,7 @@ namespace Microsoft.Test.OData.Tests.Client.DisableAtomTests
         }
 
         // [Ignore] // Remove Atom
-        // [Fact] // github issuse: #896
+        // //--Test007-- [Fact] // github issuse: #896
         public void InsertUsingAtomShouldBeFailedClientTest()
         {
             // TestClientContext.Format.UseAtom();

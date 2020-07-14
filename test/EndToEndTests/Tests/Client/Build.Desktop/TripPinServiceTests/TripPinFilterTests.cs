@@ -24,7 +24,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TripPinFilterDefaultStringFunctions()
         {
             #region Contains
@@ -142,7 +142,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             #endregion
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TripPinFilterDefaultDateTimeFunctions()
         {
             #region year
@@ -206,7 +206,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             #endregion
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TripPinFilterDefaultMathFunctions()
         {
             #region round
@@ -234,7 +234,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             #endregion
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TripPinFilterDefaultTypeFunctions()
         {
             #region isof
@@ -335,7 +335,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
             #endregion
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TripPinFilterDefaultGeoFunctions()
         {
             //No data for test.

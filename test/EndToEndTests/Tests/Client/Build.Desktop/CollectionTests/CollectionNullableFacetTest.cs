@@ -31,7 +31,7 @@ using Microsoft.Test.OData.Tests.Client.Common;
         /// Verify collection structrual property with nullable facet specified false cannot have null element
         /// And collection can be empty
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void CollectionNullableFalseInStructrualProperty()
         {
             var personToAdd = new ODataResource
@@ -50,7 +50,7 @@ using Microsoft.Test.OData.Tests.Client.Common;
         /// Verify collection in structrual property with nullable facet specified false can have null element
         /// And collection can be empty
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void CollectionNullableTrueInStructrualProperty()
         {
             var personToAdd = new ODataResource

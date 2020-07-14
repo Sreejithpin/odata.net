@@ -15,7 +15,7 @@ namespace Microsoft.Test.OData.Tests.Client.RegressionTests
 
     public class ODataLibRegressionTests
     {
-        [Fact]
+        //--Test007-- [Fact]
         public void WriterShouldNotIncludeTypeNameForCollectionOfDerivedType()
         {
             // JSON Light: writer doesn't include type name for collection of derived type

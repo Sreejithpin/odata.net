@@ -45,7 +45,7 @@ namespace Microsoft.Test.OData.Tests.Client.WriteJsonPayloadTests
         /// <summary>
         /// Write a feed with multiple order entries. The feed/entry contains properties, navigation & association links, next link.
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void OrderFeedTest()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -99,7 +99,7 @@ namespace Microsoft.Test.OData.Tests.Client.WriteJsonPayloadTests
         /// <summary>
         /// Write an expanded customer entry containing primitive, complex, collection of primitive/complex properties.
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void ExpandedCustomerEntryTest()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -150,7 +150,7 @@ namespace Microsoft.Test.OData.Tests.Client.WriteJsonPayloadTests
         /// <summary>
         /// Write an entry containing stream, named stream
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void CarEntryTest()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -186,7 +186,7 @@ namespace Microsoft.Test.OData.Tests.Client.WriteJsonPayloadTests
         /// <summary>
         /// Write a feed containing actions, derived type entry instance
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void PersonFeedTest()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -248,7 +248,7 @@ namespace Microsoft.Test.OData.Tests.Client.WriteJsonPayloadTests
         /// <summary>
         /// Write an employee entry with/without ExpectedTypeName in serialization info
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void EmployeeEntryTest()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -299,7 +299,7 @@ namespace Microsoft.Test.OData.Tests.Client.WriteJsonPayloadTests
         /// <summary>
         /// Write complex collection response
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void ComplexCollectionTest()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -336,7 +336,7 @@ namespace Microsoft.Test.OData.Tests.Client.WriteJsonPayloadTests
         /// <summary>
         /// Write $ref response
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void LinksTest()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -358,7 +358,7 @@ namespace Microsoft.Test.OData.Tests.Client.WriteJsonPayloadTests
         /// <summary>
         /// Write $ref response with a single link
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void SingleLinkTest()
         {
             foreach (var mimeType in this.mimeTypes)
@@ -380,7 +380,7 @@ namespace Microsoft.Test.OData.Tests.Client.WriteJsonPayloadTests
         /// <summary>
         /// Write a request message with an entry
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestMessageTest()
         {
             foreach (var mimeType in this.mimeTypes)

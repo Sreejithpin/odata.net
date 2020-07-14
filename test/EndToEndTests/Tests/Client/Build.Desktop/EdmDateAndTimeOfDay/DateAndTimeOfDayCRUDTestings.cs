@@ -25,7 +25,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
         }
 
         #region Query/Action/Function
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityContainsDateAndTimeOfDay()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -60,7 +60,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryTopLevelProperies()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -100,7 +100,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryRawValue()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -124,7 +124,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryWithFilterDate()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -161,7 +161,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryWithFilterTime()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -198,7 +198,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryWithOrderByDate()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -241,7 +241,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryWithOrderByTime()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -284,7 +284,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionReturnDate()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -301,7 +301,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionWithDate()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -318,7 +318,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionReturnTime()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -335,7 +335,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionWithTime()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -352,7 +352,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryByDateKey()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -384,7 +384,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
                 }
             }
         }
-        [Fact]
+        //--Test007-- [Fact]
         public void ActionTakeDateAndTimeAsParameter()
         {
             var writerSettings = new ODataMessageWriterSettings();
@@ -445,7 +445,7 @@ namespace Microsoft.Test.OData.Tests.Client.EdmDateAndTimeOfDay
 #region Client
 
 #if !(NETCOREAPP1_0 || NETCOREAPP2_0)
-        [Fact]
+        //--Test007-- [Fact]
         public void ClientTest()
         {
             // Query Entity Contain Date/TimeOfDay

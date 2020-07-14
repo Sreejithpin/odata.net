@@ -22,7 +22,7 @@ namespace Microsoft.Test.OData.Tests.Client.SingletonTests
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void SingletonClientTest()
         {
             Random rand = new Random();
@@ -171,7 +171,7 @@ namespace Microsoft.Test.OData.Tests.Client.SingletonTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DerivedTypeSingletonClientTest()
         {
             //Query Singleton
@@ -275,7 +275,7 @@ namespace Microsoft.Test.OData.Tests.Client.SingletonTests
             Assert.True(publicCompany.LabourUnion != null);
         }
         #region Action/Function
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeFunctionBoundedToSingleton()
         {
             var employeeCount = TestClientContext.Execute<int>(new Uri(ServiceBaseUri.AbsoluteUri + "Company/Microsoft.Test.OData.Services.ODataWCFService.GetEmployeesCount()", UriKind.Absolute)).Single();
@@ -287,7 +287,7 @@ namespace Microsoft.Test.OData.Tests.Client.SingletonTests
             Assert.Equal(2, employeeCount);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeActionBoundedToSingleton()
         {
             Company company = TestClientContext.Company.GetValue();

@@ -36,7 +36,7 @@ namespace Microsoft.Test.OData.Tests.Client.CustomInstanceAnnotationsTests
             CustomInstanceAnnotationsGenerator.NextNameIndex = 0;
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DetectPayloadKind()
         {
             var responseMessage = new Microsoft.Test.OData.Tests.Client.Common.InMemoryMessage();
@@ -74,7 +74,7 @@ namespace Microsoft.Test.OData.Tests.Client.CustomInstanceAnnotationsTests
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestWithSinglePreferHeaderAll()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();
@@ -106,7 +106,7 @@ namespace Microsoft.Test.OData.Tests.Client.CustomInstanceAnnotationsTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestSingleAnnotation()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();
@@ -137,7 +137,7 @@ namespace Microsoft.Test.OData.Tests.Client.CustomInstanceAnnotationsTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestWithMultipleCompatiblePreferHeaderParts()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();
@@ -169,7 +169,7 @@ namespace Microsoft.Test.OData.Tests.Client.CustomInstanceAnnotationsTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestWithMultipleIncompatiblePreferHeaders()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();
@@ -190,7 +190,7 @@ namespace Microsoft.Test.OData.Tests.Client.CustomInstanceAnnotationsTests
             context.SaveChanges();
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestWithMultipleIncludeAnnotationsHeaders()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();
@@ -221,7 +221,7 @@ namespace Microsoft.Test.OData.Tests.Client.CustomInstanceAnnotationsTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestWithMultipleIncludeAnnotationsHeadersInvertHeaders()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();

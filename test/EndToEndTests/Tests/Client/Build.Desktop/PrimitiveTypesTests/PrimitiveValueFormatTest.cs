@@ -38,7 +38,7 @@ namespace Microsoft.Test.OData.Tests.Client.PrimitiveTypesTests
 #if !(NETCOREAPP1_0 || NETCOREAPP2_0)
         // NetCore: *QueryResult.Count() sends an synch query internally, so this needs to be re-written to be done asynch.
         // Otherwise this test throws a System.NotSupportedException.
-        [Fact]
+        //--Test007-- [Fact]
         public void LongInFilterLinqQuery()
         {
             const long int64Id = 1;
@@ -65,7 +65,7 @@ namespace Microsoft.Test.OData.Tests.Client.PrimitiveTypesTests
 
         // NetCore: *QueryResult.Count() sends an synch query internally, so this needs to be re-written to be done asynch.
         // Otherwise this test throws a System.NotSupportedException.
-        [Fact]
+        //--Test007-- [Fact]
         public void FloatInFilterLinqQuery()
         {
             const float floatId = 1.0f;
@@ -82,7 +82,7 @@ namespace Microsoft.Test.OData.Tests.Client.PrimitiveTypesTests
 
         // NetCore: *QueryResult.Count() sends an synch query internally, so this needs to be re-written to be done asynch.
         // Otherwise this test throws a System.NotSupportedException.
-        [Fact]
+        //--Test007-- [Fact]
         public void DoubleInFilterLinqQuery()
         {
             const double doubleId = 1.0;
@@ -98,7 +98,7 @@ namespace Microsoft.Test.OData.Tests.Client.PrimitiveTypesTests
 
         // NetCore: *QueryResult.Count() sends an synch query internally, so this needs to be re-written to be done asynch.
         // Otherwise this test throws a System.NotSupportedException.
-        [Fact]
+        //--Test007-- [Fact]
         public void DecimalInFilterLinqQuery()
         {
             const decimal deciamlId = 1.0M;
@@ -113,156 +113,156 @@ namespace Microsoft.Test.OData.Tests.Client.PrimitiveTypesTests
         }
 #endif
 
-        [Fact]
+        //--Test007-- [Fact]
         public void LongWithoutSuffixAsKeyInURL()
         {
             PrimitiveValueAsKeyInURL("EdmInt64Set(1)");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void LongWithSuffixAsKeyInURL()
         {
             PrimitiveValueAsKeyInURL("EdmInt64Set(1L)");
             PrimitiveValueAsKeyInURL("EdmInt64Set(1l)");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FloatWithoutSuffixAsKeyInURL()
         {
             PrimitiveValueAsKeyInURL("EdmSingleSet(1.0)");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FloatWithSuffixAsKeyInURL()
         {
             PrimitiveValueAsKeyInURL("EdmSingleSet(1.0F)");
             PrimitiveValueAsKeyInURL("EdmSingleSet(1.0f)");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DoubleWithoutSuffixAsKeyInURL()
         {
             PrimitiveValueAsKeyInURL("EdmDoubleSet(1.0)");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DoubleWithSuffixAsKeyInURL()
         {
             PrimitiveValueAsKeyInURL("EdmDoubleSet(1.0D)");
             PrimitiveValueAsKeyInURL("EdmDoubleSet(1.0d)");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DecimalWithoutSuffixAsKeyInURL()
         {
             PrimitiveValueAsKeyInURL("EdmDecimalSet(1.0)");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DecimalWithSuffixAsKeyInURL()
         {
             PrimitiveValueAsKeyInURL("EdmDecimalSet(1.0M)");
             PrimitiveValueAsKeyInURL("EdmDecimalSet(1.0m)");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void LongWithoutSuffixInFilterInURL()
         {
             PrimitiveValueInFilterInURL("EdmInt64Set?$filter=Id ge -1");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void LongWithSuffixInFilterInURL()
         {
             PrimitiveValueInFilterInURL("EdmInt64Set?$filter=Id ge -1L");
             PrimitiveValueInFilterInURL("EdmInt64Set?$filter=Id ge -1l");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FloatWithoutSuffixInFilterInURL()
         {
             PrimitiveValueInFilterInURL("EdmSingleSet?$filter=Id ge -1.0");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FloatWithSuffixInFilterInURL()
         {
             PrimitiveValueInFilterInURL("EdmSingleSet?$filter=Id ge -1.0F");
             PrimitiveValueInFilterInURL("EdmSingleSet?$filter=Id ge -1.0f");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DoubleWithoutSuffixInFilterInURL()
         {
             PrimitiveValueInFilterInURL("EdmDoubleSet?$filter=Id ge -1.0");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DoubleWithSuffixInFilterInURL()
         {
             PrimitiveValueInFilterInURL("EdmDoubleSet?$filter=Id ge -1.0D");
             PrimitiveValueInFilterInURL("EdmDoubleSet?$filter=Id ge -1.0d");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DecimalWithoutSuffixInFilterInURL()
         {
             PrimitiveValueInFilterInURL("EdmDecimalSet?$filter=Id ge -1.0");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DecimalWithSuffixInFilterInURL()
         {
             PrimitiveValueInFilterInURL("EdmDecimalSet?$filter=Id ge -1.0M");
             PrimitiveValueInFilterInURL("EdmDecimalSet?$filter=Id ge -1.0m");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void LongWithoutSuffixInSkipTokenInURL()
         {
             PrimitiveValueInSkipTokenInURL("EdmInt64Set?$skiptoken=-1");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void LongWithSuffixInSkipTokenInURL()
         {
             PrimitiveValueInSkipTokenInURL("EdmInt64Set?$skiptoken=-1L");
             PrimitiveValueInSkipTokenInURL("EdmInt64Set?$skiptoken=-1l");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FloatWithoutSuffixInSkipTokenInURL()
         {
             PrimitiveValueInSkipTokenInURL("EdmSingleSet?$skiptoken=-1.0");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FloatWithSuffixInSkipTokenInURL()
         {
             PrimitiveValueInSkipTokenInURL("EdmSingleSet?$skiptoken=-1.0F");
             PrimitiveValueInSkipTokenInURL("EdmSingleSet?$skiptoken=-1.0f");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DoubleWithoutSuffixInSkipTokenInURL()
         {
             PrimitiveValueInSkipTokenInURL("EdmDoubleSet?$skiptoken=-1.0");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DoubleWithSuffixInSkipTokenInURL()
         {
             PrimitiveValueInSkipTokenInURL("EdmDoubleSet?$skiptoken=-1.0D");
             PrimitiveValueInSkipTokenInURL("EdmDoubleSet?$skiptoken=-1.0d");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DecimalWithoutSuffixInSkipTokenInURL()
         {
             PrimitiveValueInSkipTokenInURL("EdmDecimalSet?$skiptoken=-1.0");
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DecimalWithSuffixInSkipTokenInURL()
         {
             PrimitiveValueInSkipTokenInURL("EdmDecimalSet?$skiptoken=-1.0M");

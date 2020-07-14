@@ -19,7 +19,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionReturnDifferentTypes()
         {
             var customer = this.TestClientContext.Customers.First();

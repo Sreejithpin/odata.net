@@ -27,7 +27,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntryWithTypeDefinition()
         {
             foreach (var mimeType in mimeTypes)
@@ -42,7 +42,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryTopLevelPropertyWithTypeDefinition()
         {
             foreach (var mimeType in mimeTypes)
@@ -56,7 +56,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryComplexPropertyWithTypeDefinition()
         {
             foreach (var mimeType in mimeTypes)
@@ -71,7 +71,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryCollectionPropertyWithTypeDefinition()
         {
             foreach (var mimeType in mimeTypes)
@@ -89,7 +89,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryPropertyValueWithTypeDefinition()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -106,7 +106,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryAndFilterOnPropertyWithTypeDefinition()
         {
             foreach (var mimeType in mimeTypes)
@@ -124,7 +124,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryAndOrderbyPropertyWithTypeDefinition()
         {
             foreach (var mimeType in mimeTypes)
@@ -142,7 +142,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeFunctionWithDefinedTypeParameterAndReturnType()
         {
             foreach (var mimeType in mimeTypes)
@@ -156,7 +156,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CreateEntityWithDefinedTypeProperties()
         {
             var entry = new ODataResource() { TypeName = NameSpacePrefix + "Person" };
@@ -236,7 +236,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             Assert.Equal("Zhang", entry.Properties.Single(p => p.Name == "LastName").Value);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntryWithUnsignedIntegerProperties()
         {
             foreach (var mimeType in mimeTypes)
@@ -272,7 +272,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryUnsignedIntegerProperties()
         {
             foreach (var mimeType in mimeTypes)
@@ -290,7 +290,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryComplexPropertyWithUintMembers()
         {
             foreach (var mimeType in mimeTypes)
@@ -306,7 +306,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryCollectionPropertyOfUIntMembers()
         {
             foreach (var mimeType in mimeTypes)
@@ -324,7 +324,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryPropertyValueOfUintMembers()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -335,7 +335,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             Assert.Equal(200, responseMessage.StatusCode);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void CreateEntityWithUIntProperties()
         {
             var entry = new ODataResource() { TypeName = NameSpacePrefix + "Product" };
@@ -423,7 +423,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             Assert.Equal(86ul, createdEntry.Properties.Single(p => p.Name == "LifeTimeInSeconds").Value);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InvokeActionWithUintParameterAndReturnType()
         {
             var writerSettings = new ODataMessageWriterSettings();
@@ -457,7 +457,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryAndFilterByUnsignedIntegerProperties()
         {
             foreach (var mimeType in mimeTypes)
@@ -491,7 +491,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryAndOrderByUnsignedIntegerProperties()
         {
             foreach (var mimeType in mimeTypes)
@@ -508,7 +508,7 @@ namespace Microsoft.Test.OData.Tests.Client.TypeDefinitionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryAndSelectUnsignedIntegerProperties()
         {
             foreach (var mimeType in mimeTypes)

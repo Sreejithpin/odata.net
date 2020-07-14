@@ -32,7 +32,7 @@ namespace Microsoft.Test.OData.Tests.Client.QueryOptionTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void OrderbyQueryTest()
         {
             foreach (var mimeType in mimeTypes)

@@ -22,7 +22,7 @@ namespace Microsoft.Test.OData.Tests.Client.UrlModifyingTests
         {
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void ModifyQueryOptions()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();
@@ -44,7 +44,7 @@ namespace Microsoft.Test.OData.Tests.Client.UrlModifyingTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RemapRequestUri()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();
@@ -55,7 +55,7 @@ namespace Microsoft.Test.OData.Tests.Client.UrlModifyingTests
             Assert.NotNull(retrievedCustomers);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RemapBase()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();
@@ -72,7 +72,7 @@ namespace Microsoft.Test.OData.Tests.Client.UrlModifyingTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RemapBaseAndPathSeparately()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();
@@ -89,7 +89,7 @@ namespace Microsoft.Test.OData.Tests.Client.UrlModifyingTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BasesDontMatchFail()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();
@@ -114,7 +114,7 @@ namespace Microsoft.Test.OData.Tests.Client.UrlModifyingTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BatchRequest()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();
@@ -134,7 +134,7 @@ namespace Microsoft.Test.OData.Tests.Client.UrlModifyingTests
         }
 
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BatchRequestBaseUriDifferentBetweenBatchAndRequest()
         {
             var context = this.CreateWrappedContext<DefaultContainer>();

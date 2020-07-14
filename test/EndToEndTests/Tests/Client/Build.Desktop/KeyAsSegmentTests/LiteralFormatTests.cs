@@ -19,7 +19,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             :base(helper)
         {
         }
-        [Fact]
+        //--Test007-- [Fact]
         public void PrimaryKeyValueBeginsWithDollarSign()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -38,7 +38,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void PrimaryKeyValueContainsForwardSlash()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -51,7 +51,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void PrimaryKeyValueContainsWhitespace()
         {
             var contextWrapper = this.CreateWrappedContext();

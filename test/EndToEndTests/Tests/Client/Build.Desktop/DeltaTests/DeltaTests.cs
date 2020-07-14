@@ -29,7 +29,7 @@ namespace Microsoft.Test.OData.Tests.Client.DeltaTests
                 MimeTypes.ApplicationJson + MimeTypes.ODataParameterNoMetadata,
             };
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestDeltaLink()
         {
             var customersSet = Model.FindDeclaredEntitySet("Customers");
@@ -67,7 +67,7 @@ namespace Microsoft.Test.OData.Tests.Client.DeltaTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestDeltaLink_Containment()
         {
             var accountsSet = this.Model.FindDeclaredEntitySet("Accounts");
@@ -105,7 +105,7 @@ namespace Microsoft.Test.OData.Tests.Client.DeltaTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestDeltaLink_Derived()
         {
             var peopleSet = Model.FindDeclaredEntitySet("People");
@@ -140,7 +140,7 @@ namespace Microsoft.Test.OData.Tests.Client.DeltaTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestDeltaLink_Expanded()
         {
             var customersSet = Model.FindDeclaredEntitySet("Customers");
@@ -202,7 +202,7 @@ namespace Microsoft.Test.OData.Tests.Client.DeltaTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void RequestDeltaLink_Projection()
         {
             var customersSet = Model.FindDeclaredEntitySet("Customers");

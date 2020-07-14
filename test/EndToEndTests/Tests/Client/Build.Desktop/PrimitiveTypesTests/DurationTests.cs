@@ -29,7 +29,7 @@ namespace Microsoft.Test.OData.Tests.Client.PrimitiveTypes
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntitySet()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -63,7 +63,7 @@ namespace Microsoft.Test.OData.Tests.Client.PrimitiveTypes
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityInstance()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -97,7 +97,7 @@ namespace Microsoft.Test.OData.Tests.Client.PrimitiveTypes
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityProperty()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -127,7 +127,7 @@ namespace Microsoft.Test.OData.Tests.Client.PrimitiveTypes
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityNavigation()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -161,7 +161,7 @@ namespace Microsoft.Test.OData.Tests.Client.PrimitiveTypes
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityPropertyValue()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -180,7 +180,7 @@ namespace Microsoft.Test.OData.Tests.Client.PrimitiveTypes
         }
 
 #if !(NETCOREAPP1_0 || NETCOREAPP2_0)
-        [Fact]
+        //--Test007-- [Fact]
         public void InsertAndUpdatePropertyValueUsingLinq()
         {
             TimeSpan timespan = new TimeSpan((new Random()).Next());

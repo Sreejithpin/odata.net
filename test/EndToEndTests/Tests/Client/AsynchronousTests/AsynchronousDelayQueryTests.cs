@@ -471,7 +471,7 @@ namespace Microsoft.Test.OData.Tests.Client.AsynchronousTests
             Assert.Equal(originalPrice * 50 / 100, product.UnitPricePlus);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionAndFunctionImportInFilterAndOrderBy()
         {
             TestClientContext = this.CreateWrappedContext<InMemoryEntitiesPlus>().Context;

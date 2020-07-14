@@ -32,7 +32,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
         /// <summary>
         /// Insert and delete a simple entity.
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void UpsertEntityInstance()
         {
             // create entry and insert
@@ -84,7 +84,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
         /// <summary>
         /// Insert and delete a simple entity.
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void InsertDeleteEntityInstance()
         {
             // create entry and insert
@@ -136,7 +136,7 @@ namespace Microsoft.Test.OData.Tests.Client.ODataWCFServiceTests
         /// <summary>
         /// Update a simple entity.
         /// </summary>
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateEntityInstanceProperty()
         {
             // query an entry

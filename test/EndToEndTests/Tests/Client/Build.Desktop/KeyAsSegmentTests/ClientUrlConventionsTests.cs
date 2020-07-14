@@ -19,7 +19,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
             :base(helper)
         {
         }
-        [Fact]
+        //--Test007-- [Fact]
         public void ClientChangesUrlConventionsBetweenQueries()
         {
             var contextWrapper = this.CreateWrappedContext();
@@ -40,7 +40,7 @@ namespace Microsoft.Test.OData.Tests.Client.KeyAsSegmentTests
         }
 
         // This is an unsupported scenario and does not currently work.
-        // [Fact] // github issuse: #896
+        // //--Test007-- [Fact] // github issuse: #896
         public void ClientChangesUrlConventionsBetweenQueryAndUpdate()
         {
             var contextWrapper = this.CreateWrappedContext();

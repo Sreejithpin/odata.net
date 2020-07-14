@@ -26,19 +26,19 @@ namespace Microsoft.Test.OData.Tests.Client.BatchRequestTests
         {
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BatchRequestWithAbsoluteUriTest()
         {
             BatchRequestWithPayloadUriWritingOption(BatchPayloadUriOption.AbsoluteUri);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BatchRequestWithAbsoluteResourcePathAndHostTest()
         {
             BatchRequestWithPayloadUriWritingOption(BatchPayloadUriOption.AbsoluteUriUsingHostHeader);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void BatchRequestWithRelativeResourcePathTest()
         {
             BatchRequestWithPayloadUriWritingOption(BatchPayloadUriOption.RelativeUri);

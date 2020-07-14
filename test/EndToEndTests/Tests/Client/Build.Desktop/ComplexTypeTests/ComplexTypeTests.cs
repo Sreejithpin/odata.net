@@ -31,7 +31,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
 
         #region Complex type inheritance
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityWithDerivedComplexTypeProperty()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -80,7 +80,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryDerivedComplexTypeProperty()
         {
             string[] types = new string[]
@@ -124,7 +124,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryPropertyUnderDerivedComplexTypeProperty()
         {
             string[] types = new string[]
@@ -156,7 +156,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FilterByPropertyUnderDerivedComplexTypeProperty()
         {
             string[] types = new string[]
@@ -229,7 +229,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateDerivedComplexTypeProperty()
         {
             string[] types = new string[]
@@ -313,7 +313,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InsertDeleteEntityWithDerivedComplexTypeProperty()
         {
             string[] types = new string[]
@@ -445,7 +445,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionReturnDerivedComplexType()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -509,7 +509,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryPropertyUnderDerivedComplexTypeClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -520,7 +520,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             Assert.Equal("Cats", familyName);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void TopLevelQueryDerivedComplexTypePropertyClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -532,7 +532,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             Assert.Equal("Cats", homeAddress.FamilyName);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryOptionOnDerivedComplexTypePropertyClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -547,7 +547,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             Assert.Equal("Cats", homeAddress.FamilyName);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateDerivedComplexTypeClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -572,7 +572,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             Assert.Equal("Tigers", updatedHomeAddress.FamilyName);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InsertDeleteEntityWithDerivedComplexTypePropertyClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -616,7 +616,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
 
         #region Open complex type
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryEntityWithOpenComplexTypeProperty()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -671,7 +671,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryOpenPropertyUnderOpenComplexType()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -701,7 +701,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FilterByAnOpenProperty()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -762,7 +762,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateOpenComplexTypeProperty()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -848,7 +848,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InsertDeleteEntityWithOpenComplexTypeProperty()
         {
             string[] types = new string[]
@@ -936,7 +936,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionReturnOpenComplexType()
         {
             ODataMessageReaderSettings readerSettings = new ODataMessageReaderSettings() { BaseUri = ServiceBaseUri };
@@ -1002,7 +1002,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void QueryOpenComplexTypeClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1020,7 +1020,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             Assert.NotNull(address);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateOpenComplexTypeClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1062,7 +1062,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             Assert.Equal("c", updatedAccountInfo.Address.PostalCode);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateOpenComplexTypeWithUndeclaredPropertiesClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1078,7 +1078,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             // No more check, this case is to make sure that client doesn't throw exception.
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateAndReadOpenComplexTypeWithUndeclaredPropertiesClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1126,7 +1126,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
                 undeclaredOdataPropertyValue.RawValue);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void InsertDeleteEntityWithOpenComplexTypePropertyClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1171,7 +1171,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
             Assert.Equal(0, queryDeletedAccount.Count());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void DeleteInsertEntityWithOpenComplexTypePropertyClientTest()
         {
             TestClientContext.Format.UseJson(Model);
@@ -1240,7 +1240,7 @@ namespace Microsoft.Test.OData.Tests.Client.ComplexTypeTests
 
         #region open collection property
 
-        [Fact]
+        //--Test007-- [Fact]
         public void OpenCollectionPropertyRoundTrip()
         {
             var mimeType = MimeTypes.ApplicationJson + MimeTypes.ODataParameterFullMetadata;

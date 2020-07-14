@@ -28,7 +28,7 @@ namespace Microsoft.Test.OData.Tests.Client.OperationTests
 
 #if !(NETCOREAPP1_0 || NETCOREAPP2_0)
         // TODO : Reactive this test cases after merging entity and complex for writer
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntitiesTakeComplexsReturnEntities()
         {
             var customerQuery = this.TestClientContext.CreateQuery<Customer>("Customers");
@@ -53,7 +53,7 @@ namespace Microsoft.Test.OData.Tests.Client.OperationTests
             Assert.Equal(2, customers.Count());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntitiesTakeComplexReturnEntity()
         {
             var customerQuery = this.TestClientContext.CreateQuery<Customer>("Customers");
@@ -68,7 +68,7 @@ namespace Microsoft.Test.OData.Tests.Client.OperationTests
             Assert.NotNull(customer);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntityTakeCollectionReturnEntities()
         {
             var customerQuery = new DataServiceQuerySingle<Customer>(this.TestClientContext, "Customers(3)");
@@ -78,7 +78,7 @@ namespace Microsoft.Test.OData.Tests.Client.OperationTests
             Assert.Equal(1, orders.Count());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntitiesTakeStringReturnEntities()
         {
             var orderQuery = this.TestClientContext.CreateQuery<Order>("Orders");
@@ -87,7 +87,7 @@ namespace Microsoft.Test.OData.Tests.Client.OperationTests
             Assert.Equal(2, orders.Count());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntitiesTakeEntitiesReturnEntities()
         {
             var orders = new[]
@@ -114,7 +114,7 @@ namespace Microsoft.Test.OData.Tests.Client.OperationTests
             Assert.Equal(1, customers.Count());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntitiesTakeEntityReferenceReturnEntity()
         {
             var order = new Order()
@@ -129,7 +129,7 @@ namespace Microsoft.Test.OData.Tests.Client.OperationTests
             Assert.Equal(1, customers.Count());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntitiesTakeEntityReturnEntities()
         {
             var order = new Order()
@@ -145,7 +145,7 @@ namespace Microsoft.Test.OData.Tests.Client.OperationTests
             Assert.Equal(1, customers.Count());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntitiesTakeEntityReferencesReturnEntities()
         {
             var orders = new[]
@@ -168,14 +168,14 @@ namespace Microsoft.Test.OData.Tests.Client.OperationTests
             Assert.Equal(1, customers.Count());
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntitiesReturnEntityExpandNavigation()
         {
             var order = this.TestClientContext.Orders.GetOrderByNote(new string[] { "1111", "parent" }).Expand(o => o.Customer).GetValue();
             Assert.NotNull(order.Customer);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntitiesReturnEntitySelect()
         {
             var order = this.TestClientContext.Orders.GetOrderByNote(new string[] { "1111", "parent" }).Select(o => new Order() { ID = o.ID, Notes = o.Notes }).GetValue();
@@ -184,7 +184,7 @@ namespace Microsoft.Test.OData.Tests.Client.OperationTests
         }
 #endif
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntitiesReturnEntitiesExpandNavigation()
         {
             var orders = this.TestClientContext.Orders.GetOrdersByNote("1111").Expand(o => o.Customer).ToList();
@@ -193,7 +193,7 @@ namespace Microsoft.Test.OData.Tests.Client.OperationTests
             Assert.NotNull(orders[1].Customer);
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void FunctionOfEntitiesReturnEntitiesFilter()
         {
             var orders = this.TestClientContext.Orders.GetOrdersByNote("1111").Where(o => o.ID < 1).ToList();

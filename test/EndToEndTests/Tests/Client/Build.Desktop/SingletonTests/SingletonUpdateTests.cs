@@ -25,7 +25,7 @@ namespace Microsoft.Test.OData.Tests.Client.SingletonTests
 
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateSingletonProperty()
         {
             string[] cities = { "London", "Seattle", "Paris", "New York", "Washington" };
@@ -49,7 +49,7 @@ namespace Microsoft.Test.OData.Tests.Client.SingletonTests
             }
         }
 
-        [Fact]
+        //--Test007-- [Fact]
         public void UpdateSingletonComplexProperty()
         {
             ODataResource complex0 = new ODataResource()
