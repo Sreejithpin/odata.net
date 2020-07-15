@@ -111,13 +111,13 @@ steps:
       & "$(snExe64)" /Vr $(ProductBinPath3)\netstandard2.0\$(mainDll3)      
   enabled: true
 
-- task: BatchScript@1
-  displayName: 'Run script - Test Startup'
-  inputs:
-    filename: '$(Build.SourcesDirectory)\tools\Scripts\TestStartup.cmd'
-    arguments: '$(Build.SourcesDirectory)'
-    modifyEnvironment: true
-    workingFolder: '$(Build.SourcesDirectory)\tools\Scripts'
+# - task: BatchScript@1
+#   displayName: 'Run script - Test Startup'
+#   inputs:
+#     filename: '$(Build.SourcesDirectory)\tools\Scripts\TestStartup.cmd'
+#     arguments: '$(Build.SourcesDirectory)'
+#     modifyEnvironment: true
+#     workingFolder: '$(Build.SourcesDirectory)\tools\Scripts'
 
 - task: AzurePowerShell@2
   displayName: 'Cleanup DB'
