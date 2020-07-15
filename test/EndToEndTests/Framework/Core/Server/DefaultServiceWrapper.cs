@@ -37,7 +37,8 @@ namespace Microsoft.Test.OData.Framework.Server
         /// </summary>
         public void StartService()
         {
-            if (this.dataServiceHost.State != System.ServiceModel.CommunicationState.Opened) {
+            if (this.dataServiceHost.State != System.ServiceModel.CommunicationState.Opened && this.dataServiceHost.State != System.ServiceModel.CommunicationState.Faulted)
+            {
 
                 try { this.dataServiceHost.Open(); }
                 catch(Exception ex)
