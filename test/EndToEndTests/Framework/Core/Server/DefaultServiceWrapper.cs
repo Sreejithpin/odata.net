@@ -37,7 +37,7 @@ namespace Microsoft.Test.OData.Framework.Server
         /// </summary>
         public void StartService()
         {
-            this.dataServiceHost.Open();
+           // this.dataServiceHost.Open();
         }
 
         /// <summary>
