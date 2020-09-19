@@ -9,9 +9,11 @@ namespace Microsoft.OData.Evaluation
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
+    using System.Linq;
     using Microsoft.OData.Edm;
     using Microsoft.OData.JsonLight;
     using Microsoft.OData.Metadata;
+    using Xunit;
 
     /// <summary>
     /// Interface used for substitutability of the metadata-centric responsibilities of <see cref="ODataJsonLightDeserializer"/>.
@@ -311,8 +313,14 @@ namespace Microsoft.OData.Evaluation
 
             IList<IEdmOperation> bindableOperations;
             if (!this.bindableOperationsCache.TryGetValue(bindingType, out bindableOperations))
-            {
+            {                
                 bindableOperations = MetadataUtils.CalculateBindableOperationsForType(bindingType, this.model, this.edmTypeResolver);
+
+                foreach (var key in this.bindableOperationsCache.Keys)
+                {
+                    Assert.NotEqual(bindingType.FullTypeName(), key.FullTypeName());
+                }
+
                 this.bindableOperationsCache.Add(bindingType, bindableOperations);
             }
 
