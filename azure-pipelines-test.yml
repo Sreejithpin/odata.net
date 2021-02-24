@@ -59,16 +59,6 @@ steps:
       $publish = New-Object System.EnterpriseServices.Internal.Publish
       $publish.GacInstall("$(gacUtil)")
 
-- task: DotNetCoreCLI@2
-  displayName: 'Build Product'  
-  inputs:
-    command: 'build'
-    arguments: '--configuration $(BuildConfiguration)'
-    projects: |
-     $(Build.SourcesDirectory)\src\Microsoft.Spatial\Microsoft.Spatial.csproj
-     $(Build.SourcesDirectory)\src\Microsoft.OData.Edm\Microsoft.OData.Edm.csproj
-     $(Build.SourcesDirectory)\src\Microsoft.OData.Core\Microsoft.OData.Core.csproj
-     $(Build.SourcesDirectory)\src\Microsoft.OData.Client\Microsoft.OData.Client.csproj
 
 - task: UseDotNet@2
   inputs:
@@ -78,6 +68,10 @@ steps:
   inputs:
     version: '3.1.x'
 
+- task: RunRScript@0
+  displayName: Run R Script
+  inputs:
+    scriptPath: $(Build.SourcesDirectory)/scripts/BuildPlots.R
 
 - task: DotNetCoreCLI@2
   displayName: 'Build Unit Test - DI'  
