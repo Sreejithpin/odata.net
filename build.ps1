@@ -531,26 +531,7 @@ Function BuildProcess
 
     RunBuild ('OData.Net45.sln')
 
-    if ($TestType -ne 'Quick')
-    {
-        # OData.Tests.E2E.sln contains the product code for Net45 framework and a comprehensive list of test projects
-        RunBuild ('OData.Tests.E2E.sln')
-        RunBuild ('OData.Net35.sln')
-        # Solutions that contain .NET Core projects require VS2017 for full support. VS2015 supports only .NET Standard.
-        if($VS15MSBUILD)
-        {
-            Write-Host "Found VS2017 version: $VS15MSBUILD"
-            RunBuild ('OData.Tests.E2E.NetCore.VS2017.sln') -vsToolVersion '15.0'
-            RunBuild ('OData.CodeGen.sln') -vsToolVersion '15.0'
-        }
-        else
-        {
-            Write-Host ('Warning! Skipping build for .NET Core tests because no versions of VS2017 found. ' + `
-            'Building only product in .NET Standard.') -ForegroundColor $Warning
-            RunBuild ('OData.NetStandard.sln')
-        }
-        RunBuild ('OData.Tests.WindowsApps.sln')
-    }
+  
 
     Write-Host "Build Done" -ForegroundColor $Success
     $script:BUILD_END_TIME = Get-Date
@@ -621,8 +602,7 @@ if (! (Test-Path $LOGDIR))
 
 if ($TestType -eq 'EnableSkipStrongName')
 {
-    CleanBeforeScorch
-    NugetRestoreSolution
+    
     BuildProcess
     SkipStrongName
     Exit
@@ -636,12 +616,10 @@ elseif ($TestType -eq 'DisableSkipStrongName')
     Exit
 }
 
-CleanBeforeScorch
-NugetRestoreSolution
 BuildProcess
 SkipStrongName
 TestProcess
-FxCopProcess
+
 Cleanup
 
 $buildTime = New-TimeSpan $script:BUILD_START_TIME -end $script:BUILD_END_TIME
